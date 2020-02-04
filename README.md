@@ -1,4 +1,4 @@
-# perf-opt
+# perf-ops
 
 `AWS` `S3` `Glue` `Presto` `Spark` `SparkSQL` `Alluxio` `Parquet` `TPC-H`
 
