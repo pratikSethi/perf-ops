@@ -18,6 +18,8 @@ AWS_SECRET_ACCESS_KEY = 'aws_secret_access_key'
 # Spark Config params
 SPARK_EXECUTOR_MEMORY_KEY = 'spark.executor.memory'
 SPARK_EXECUTOR_MEMORY_VALUE = '5g'
+SPARK_DRIVER_MEMORY_KEY = 'spark.driver.memory'
+SPARK_DRIVER_MEMORY_VALUE = '5g'
 
 # Hadoop FS Config params
 FS_S3_IMPL = 'fs.s3n.impl'
@@ -25,16 +27,22 @@ FS_S3_IMPL_CLASSNAME = 'org.apache.hadoop.fs.s3native.NativeS3FileSystem'
 FS_S3_AWS_ACCESS_KEY_ID_KEY = 'fs.s3n.awsAccessKeyId'
 FS_S3_AWS_SECRET_ACCESS_KEY_KEY = 'fs.s3n.awsSecretAccessKey'
 
-# S3 Locations 1 GB TPCH Dataset
-SMALL_DATASET_ROOT_URL =
+# Sample Unprocessed datasets
+SMALL_SAMPLE_UNPROCESSED_DATASET_ROOT_URL = 's3a://sample-unprocessed/tpch/block/1'
 # S3 Locations 10 GB TPCH Dataset
-MEDIUM_DATASET_ROOT_URL =
+MEDIUM_SAMPLE_UNPROCESSED_DATASET_ROOT_URL = 's3a://sample-unprocessed/tpch/block/10'
 # S3 Locations 100 GB TPCH Dataset
-LARGE_DATASET_ROOT_URL =
-# S3 Locations 1000 GB TPCH Dataset
-XTRA_LARGE_DATASET_ROOT_URL =
 
-SAMPLE_URL = 's3a://gdelt-open-data/v2/events/*'
+# Actual Datasets
+# S3 Locations 10 GB TPCH Dataset
+SMALL_SAMPLE_UNPROCESSED_DATASET_ROOT_URL = 's3a: // optmark-unprocessed/tpch/block/1/*
+# S3 Locations 10 GB TPCH Dataset
+MEDIUM_SAMPLE_UNPROCESSED_DATASET_ROOT_URL = 's3a://optmark-unprocessed/tpch/block/10/*'
+# S3 Location 100 GB TPCH Dataset
+LARGE_DATASET_ROOT_URL = 's3a://optmark-unprocessed/tpch/block/100/*'
+# S3 Locations 1000 GB TPCH Dataset
+XTRA_LARGE_DATASET_ROOT_URL = 's3a://optmark-unprocessed/tpch/block/1000/*'
+
 SAMLPE_UNPROCESSED_BORDER_DATA_URL = 's3a://optmark-sample-data/border-crossing.csv'
 SAMPLE_PROCESSED_BORDER_DATA_URL = 's3a://sample-processed/'
 
@@ -52,8 +60,10 @@ def main():
     access_key = config.get(AWS_PROFILE, AWS_SECRET_ACCESS_KEY)
 
     # initialize spark session
-    spark = SparkSession.builder.appName(APP_NAME).config(
-        SPARK_EXECUTOR_MEMORY_KEY, SPARK_EXECUTOR_MEMORY_VALUE).getOrCreate()
+    spark = SparkSession.builder.appName(APP_NAME) \
+        .config(SPARK_EXECUTOR_MEMORY_KEY, SPARK_EXECUTOR_MEMORY_VALUE) \
+        .config(SPARK_DRIVER_MEMORY_KEY, SPARK_DRIVER_MEMORY_VALUE) \
+        .getOrCreate()
     sc = spark.sparkContext
 
     # hadoop configs for accessing S3
