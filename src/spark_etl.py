@@ -118,6 +118,7 @@ def main():
     sampleDotaAbilitiesUpgradeSchema = schema.TPCHSchema() \
         .getSampleDotaAbilitiesUpgradeSchema()
 
+    '''
     df = sqlContext.read \
         .format('com.databricks.spark.csv') \
         .options(header='false') \
@@ -138,7 +139,6 @@ def main():
 
     df_customer.write.parquet(SMALL_SAMPLE_PROCESSED_DATASET_CUSTOMER_ROOT_URL)
 
-    
     ###
     # Lineitem
     ###
@@ -222,8 +222,6 @@ def main():
         .load(SMALL_SAMPLE_UNPROCESSED_DATASET_SUPPLIER_ROOT_URL, schema=supplierSchema)
 
     df_supplier.write.parquet(SMALL_SAMPLE_PROCESSED_DATASET_SUPPLIER_ROOT_URL)
-
-    '''
 
 
 if __name__ == '__main__':
