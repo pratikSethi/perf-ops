@@ -97,24 +97,3 @@ class TPCHSchema(object):
             StructField('s_acctbal', DoubleType(), True),
             StructField('s_comment', StringType(), True)])
         return supplierSchema
-
-    def getSampleBorderSchema(self):
-        sampleBorderSchema = StructType([
-            StructField('port_name', StringType(), True),
-            StructField('state', StringType(), True),
-            StructField('port_code', LongType(), True),
-            StructField('border', StringType(), True),
-            StructField('date', StringType(), True),
-            StructField('measure', StringType(), True),
-            StructField('value', LongType(), True),
-            StructField('location', StringType(), True)])
-        return sampleBorderSchema
-
-    def getSampleDotaAbilitiesUpgradeSchema(self):
-        dotaAbilitiesUpgradeSchema = StructType([
-            StructField('ability', LongType(), True),
-            StructField('level', LongType(), True),
-            StructField('time', LongType(), True),
-            StructField('player_slot', LongType(), True),
-            StructField('match_id', LongType(), True)])
-        return dotaAbilitiesUpgradeSchema

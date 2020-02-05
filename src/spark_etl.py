@@ -29,6 +29,8 @@ FS_S3_AWS_SECRET_ACCESS_KEY_KEY = 'fs.s3n.awsSecretAccessKey'
 
 # Sample Unprocessed datasets
 SMALL_SAMPLE_UNPROCESSED_DATASET_ROOT_URL = 's3a://sample-unprocessed/tpch/block/1/*'
+# S3 Locations 10 GB TPCH Dataset
+MEDIUM_SAMPLE_UNPROCESSED_DATASET_ROOT_URL = 's3a://sample-unprocessed/tpch/block/10/*'
 
 # TODO: Maybe create a constant map SMALL_SAMPLE_UNPROCESSED_DATASET = {'Customer' : <s3-url>}
 # So that we can automate the loading or maybe use some wildcards trick to automate the stuff
@@ -54,10 +56,31 @@ SMALL_SAMPLE_PROCESSED_DATASET_REGION_ROOT_URL = 's3a://sample-processed/tpch/bl
 SMALL_SAMPLE_PROCESSED_DATASET_SUPPLIER_ROOT_URL = 's3a://sample-processed/tpch/block/1/supplier/'
 # ================ SMALL PROCESSED TABLES ================ #
 
+# ================ MEDIUM UNPROCESSED TABLES ================ #
+MEDIUM_SAMPLE_UNPROCESSED_DATASET_CUSTOMER_ROOT_URL = 's3a://sample-unprocessed/tpch/block/10/customer.tbl'
+MEDIUM_SAMPLE_UNPROCESSED_DATASET_LINEITEM_ROOT_URL = 's3a://sample-unprocessed/tpch/block/10/lineitem.tbl'
+MEDIUM_SAMPLE_UNPROCESSED_DATASET_NATION_ROOT_URL = 's3a://sample-unprocessed/tpch/block/10/nation.tbl'
+MEDIUM_SAMPLE_UNPROCESSED_DATASET_ORDER_ROOT_URL = 's3a://sample-unprocessed/tpch/block/10/orders.tbl'
+MEDIUM_SAMPLE_UNPROCESSED_DATASET_PART_ROOT_URL = 's3a://sample-unprocessed/tpch/block/10/part.tbl'
+MEDIUM_SAMPLE_UNPROCESSED_DATASET_PARTSUPP_ROOT_URL = 's3a://sample-unprocessed/tpch/block/10/partsupp.tbl'
+MEDIUM_SAMPLE_UNPROCESSED_DATASET_REGION_ROOT_URL = 's3a://sample-unprocessed/tpch/block/10/region.tbl'
+MEDIUM_SAMPLE_UNPROCESSED_DATASET_SUPPLIER_ROOT_URL = 's3a://sample-unprocessed/tpch/block/10/supplier.tbl'
+# ================ MEDIUM UNPROCESSED TABLES ================ #
 
-# S3 Locations 10 GB TPCH Dataset
-MEDIUM_SAMPLE_UNPROCESSED_DATASET_ROOT_URL = 's3a://sample-unprocessed/tpch/block/10/*'
-# S3 Locations 100 GB TPCH Dataset
+# ================ MEDIUM PROCESSED TABLES ================ #
+MEDIUM_SAMPLE_PROCESSED_DATASET_CUSTOMER_ROOT_URL = 's3a://sample-processed/tpch/block/10/customer/'
+MEDIUM_SAMPLE_PROCESSED_DATASET_LINEITEM_ROOT_URL = 's3a://sample-processed/tpch/block/10/lineitem/'
+MEDIUM_SAMPLE_PROCESSED_DATASET_NATION_ROOT_URL = 's3a://sample-processed/tpch/block/10/nation/'
+MEDIUM_SAMPLE_PROCESSED_DATASET_ORDER_ROOT_URL = 's3a://sample-processed/tpch/block/10/orders/'
+MEDIUM_SAMPLE_PROCESSED_DATASET_PART_ROOT_URL = 's3a://sample-processed/tpch/block/10/part/'
+MEDIUM_SAMPLE_PROCESSED_DATASET_PARTSUPP_ROOT_URL = 's3a://sample-processed/tpch/block/10/partsupp/'
+MEDIUM_SAMPLE_PROCESSED_DATASET_REGION_ROOT_URL = 's3a://sample-processed/tpch/block/10/region/'
+MEDIUM_SAMPLE_PROCESSED_DATASET_SUPPLIER_ROOT_URL = 's3a://sample-processed/tpch/block/10/supplier/'
+# ================ MEDIUM PROCESSED TABLES ================ #
+
+
+# TODO: generic processes tpch url
+# s3a://sample-processed/tpch/block/<datasetSize>/tableName
 
 # Actual Datasets
 # S3 Locations 10 GB TPCH Dataset
@@ -68,12 +91,6 @@ MEDIUM_UNPROCESSED_DATASET_ROOT_URL = 's3a://optmark-unprocessed/tpch/block/10/*
 LARGE_UNPROCESSED_DATASET_ROOT_URL = 's3a://optmark-unprocessed/tpch/block/100/*'
 # S3 Locations 1000 GB TPCH Dataset
 XTRA_LARGE_UNPROCESSED_DATASET_ROOT_URL = 's3a://optmark-unprocessed/tpch/block/1000/*'
-
-SAMLPE_UNPROCESSED_BORDER_DATA_URL = 's3a://optmark-sample-data/border-crossing.csv'
-SAMPLE_PROCESSED_BORDER_DATA_URL = 's3a://sample-processed/'
-
-SAMPLE_UNPROCESSED_DOTA_DATA_URL = 's3a://sample-unprocessed/dota/ability_upgrades.csv'
-SAMPLE_PROCESSED_DOTA_DATA_URL = 's3a://sample-processed/dota'
 
 PIPE_DELIMITER = '|'
 COMMA_DELIMITER = ','
@@ -113,24 +130,12 @@ def main():
     regionSchema = schema.TPCHSchema().getRegionSchema()
     supplierSchema = schema.TPCHSchema().getSupplierSchema()
 
-    sampleBorderSchema = schema.TPCHSchema().getSampleBorderSchema()
+    # sampleBorderSchema = schema.TPCHSchema().getSampleBorderSchema()
 
-    sampleDotaAbilitiesUpgradeSchema = schema.TPCHSchema() \
-        .getSampleDotaAbilitiesUpgradeSchema()
-
+    # TODO: Automate this maybe using a for loop or some other profile config param
+    # 1 GB Datasets Trasnformations =====================================================
     '''
-    df = sqlContext.read \
-        .format('com.databricks.spark.csv') \
-        .options(header='false') \
-        .options(delimiter=COMMA_DELIMITER) \
-        .load(SAMPLE_UNPROCESSED_DOTA_DATA_URL, schema=sampleDotaAbilitiesUpgradeSchema)
-
-    df.write.parquet(SAMPLE_PROCESSED_DOTA_DATA_URL)
-
-    '''
-    ###
-    # Customer
-    ###
+    ### Customer
     df_customer = sqlContext.read \
         .format('com.databricks.spark.csv') \
         .options(header='false') \
@@ -139,10 +144,7 @@ def main():
 
     df_customer.write.parquet(SMALL_SAMPLE_PROCESSED_DATASET_CUSTOMER_ROOT_URL)
 
-    ###
-    # Lineitem
-    ###
-
+    ### Lineitem
     df_lineitem = sqlContext.read \
         .format('com.databricks.spark.csv') \
         .options(header='false') \
@@ -151,10 +153,7 @@ def main():
 
     df_lineitem.write.parquet(SMALL_SAMPLE_PROCESSED_DATASET_LINEITEM_ROOT_URL)
 
-    ###
-    # Nation
-    ###
-
+    ### Nation
     df_nation = sqlContext.read \
         .format('com.databricks.spark.csv') \
         .options(header='false') \
@@ -163,10 +162,7 @@ def main():
 
     df_nation.write.parquet(SMALL_SAMPLE_PROCESSED_DATASET_NATION_ROOT_URL)
 
-    ###
-    # Order
-    ###
-
+    ### Order
     df_order = sqlContext.read \
         .format('com.databricks.spark.csv') \
         .options(header='false') \
@@ -175,10 +171,7 @@ def main():
 
     df_order.write.parquet(SMALL_SAMPLE_PROCESSED_DATASET_ORDER_ROOT_URL)
 
-    ###
-    # Part
-    ###
-
+    ### Part
     df_part = sqlContext.read \
         .format('com.databricks.spark.csv') \
         .options(header='false') \
@@ -187,10 +180,7 @@ def main():
 
     df_part.write.parquet(SMALL_SAMPLE_PROCESSED_DATASET_PART_ROOT_URL)
 
-    ###
-    # Partsupp
-    ###
-
+    ### Partsupp
     df_partsupp = sqlContext.read \
         .format('com.databricks.spark.csv') \
         .options(header='false') \
@@ -199,10 +189,7 @@ def main():
 
     df_partsupp.write.parquet(SMALL_SAMPLE_PROCESSED_DATASET_PARTSUPP_ROOT_URL)
 
-    ###
-    # Region
-    ###
-
+    ### Region
     df_region = sqlContext.read \
         .format('com.databricks.spark.csv') \
         .options(header='false') \
@@ -211,10 +198,7 @@ def main():
 
     df_region.write.parquet(SMALL_SAMPLE_PROCESSED_DATASET_REGION_ROOT_URL)
 
-    ###
-    # Supplier
-    ###
-
+    ### Supplier
     df_supplier = sqlContext.read \
         .format('com.databricks.spark.csv') \
         .options(header='false') \
@@ -222,6 +206,89 @@ def main():
         .load(SMALL_SAMPLE_UNPROCESSED_DATASET_SUPPLIER_ROOT_URL, schema=supplierSchema)
 
     df_supplier.write.parquet(SMALL_SAMPLE_PROCESSED_DATASET_SUPPLIER_ROOT_URL)
+
+    '''
+    # 1 GB Datasets Trasnformations End =====================================================
+
+    # 10 GB Datasets Trasnformations Start =====================================================
+
+    # Customer
+    dfm_customer = sqlContext.read \
+        .format('com.databricks.spark.csv') \
+        .options(header='false') \
+        .options(delimiter=PIPE_DELIMITER) \
+        .load(MEDIUM_SAMPLE_UNPROCESSED_DATASET_CUSTOMER_ROOT_URL, schema=customerSchema)
+
+    dfm_customer.write.parquet(
+        MEDIUM_SAMPLE_PROCESSED_DATASET_CUSTOMER_ROOT_URL)
+
+    # Lineitem
+    dfm_lineitem = sqlContext.read \
+        .format('com.databricks.spark.csv') \
+        .options(header='false') \
+        .options(delimiter=PIPE_DELIMITER) \
+        .load(MEDIUM_SAMPLE_UNPROCESSED_DATASET_LINEITEM_ROOT_URL, schema=lineitemSchema)
+
+    dfm_lineitem.write.parquet(
+        MEDIUM_SAMPLE_PROCESSED_DATASET_LINEITEM_ROOT_URL)
+
+    # Nation
+    dfm_nation = sqlContext.read \
+        .format('com.databricks.spark.csv') \
+        .options(header='false') \
+        .options(delimiter=PIPE_DELIMITER) \
+        .load(MEDIUM_SAMPLE_UNPROCESSED_DATASET_NATION_ROOT_URL, schema=nationSchema)
+
+    dfm_nation.write.parquet(MEDIUM_SAMPLE_PROCESSED_DATASET_NATION_ROOT_URL)
+
+    # Order
+    dfm_order = sqlContext.read \
+        .format('com.databricks.spark.csv') \
+        .options(header='false') \
+        .options(delimiter=PIPE_DELIMITER) \
+        .load(MEDIUM_SAMPLE_UNPROCESSED_DATASET_ORDER_ROOT_URL, schema=orderSchema)
+
+    dfm_order.write.parquet(MEDIUM_SAMPLE_PROCESSED_DATASET_ORDER_ROOT_URL)
+
+    # Part
+    dfm_part = sqlContext.read \
+        .format('com.databricks.spark.csv') \
+        .options(header='false') \
+        .options(delimiter=PIPE_DELIMITER) \
+        .load(MEDIUM_SAMPLE_UNPROCESSED_DATASET_PART_ROOT_URL, schema=partSchema)
+
+    dfm_part.write.parquet(MEDIUM_SAMPLE_PROCESSED_DATASET_PART_ROOT_URL)
+
+    # Partsupp
+    dfm_partsupp = sqlContext.read \
+        .format('com.databricks.spark.csv') \
+        .options(header='false') \
+        .options(delimiter=PIPE_DELIMITER) \
+        .load(MEDIUM_SAMPLE_UNPROCESSED_DATASET_PARTSUPP_ROOT_URL, schema=partsuppSchema)
+
+    dfm_partsupp.write.parquet(
+        MEDIUM_SAMPLE_PROCESSED_DATASET_PARTSUPP_ROOT_URL)
+
+    # Region
+    dfm_region = sqlContext.read \
+        .format('com.databricks.spark.csv') \
+        .options(header='false') \
+        .options(delimiter=PIPE_DELIMITER) \
+        .load(MEDIUM_SAMPLE_UNPROCESSED_DATASET_REGION_ROOT_URL, schema=regionSchema)
+
+    dfm_region.write.parquet(MEDIUM_SAMPLE_PROCESSED_DATASET_REGION_ROOT_URL)
+
+    # Supplier
+    dfm_supplier = sqlContext.read \
+        .format('com.databricks.spark.csv') \
+        .options(header='false') \
+        .options(delimiter=PIPE_DELIMITER) \
+        .load(MEDIUM_SAMPLE_UNPROCESSED_DATASET_SUPPLIER_ROOT_URL, schema=supplierSchema)
+
+    dfm_supplier.write.parquet(
+        MEDIUM_SAMPLE_PROCESSED_DATASET_SUPPLIER_ROOT_URL)
+
+    # 10 GB Datasets Trasnformations End =====================================================
 
 
 if __name__ == '__main__':
