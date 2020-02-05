@@ -35,7 +35,7 @@ class TPCHSchema(object):
             StructField('l_comment', StringType(), True)])
     # check if we need to use self.lineitemSchema and refactor the code using coding style guide
     # for python
-    return lineitemSchema
+        return lineitemSchema
 
     def getNationSchema(self):
         nationSchema = StructType([
