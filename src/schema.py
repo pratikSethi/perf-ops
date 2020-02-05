@@ -1,17 +1,16 @@
-from pyspark.sql.types import StructType
-from pyspark.sql.types import StructField
+from pyspark.sql.types import *
 
 
 class TPCHSchema(object):
 
     def getCustomerSchema(self):
         customerSchema = StructType([
-            StructField('c_custkey', StringType(), True),
+            StructField('c_custkey', LongType(), True),
             StructField('c_name', StringType(), True),
             StructField('c_address', StringType(), True),
-            StructField('c_nationkey', StringType(), True),
+            StructField('c_nationkey', LongType(), True),
             StructField('c_phone', StringType(), True),
-            StructField('c_acctbal', StringType(), True),
+            StructField('c_acctbal', DoubleType(), True),
             StructField('c_mktsegment', StringType(), True),
             StructField('c_comment', StringType(), True)])
         return customerSchema
@@ -98,3 +97,15 @@ class TPCHSchema(object):
             StructField('s_acctbal', DoubleType(), True),
             StructField('s_comment', StringType(), True)])
         return supplierSchema
+
+    def getSampleBorderSchema(self):
+        sampleBorderSchema = StructType([
+            StructField('port_name', StringType(), True),
+            StructField('state', StringType(), True),
+            StructField('port_code', LongType(), True),
+            StructField('border', StringType(), True),
+            StructField('date', StringType(), True),
+            StructField('measure', StringType(), True),
+            StructField('value', LongType(), True),
+            StructField('location', StringType(), True)])
+        return sampleBorderSchema
