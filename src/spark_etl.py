@@ -72,7 +72,11 @@ XTRA_LARGE_UNPROCESSED_DATASET_ROOT_URL = 's3a://optmark-unprocessed/tpch/block/
 SAMLPE_UNPROCESSED_BORDER_DATA_URL = 's3a://optmark-sample-data/border-crossing.csv'
 SAMPLE_PROCESSED_BORDER_DATA_URL = 's3a://sample-processed/'
 
+SAMPLE_UNPROCESSED_DOTA_DATA_URL = 's3a://sample-unprocessed/dota/ability_upgrades.csv'
+SAMPLE_PROCESSED_DOTA_DATA_URL = 's3a://sample-processed/dota'
+
 PIPE_DELIMITER = '|'
+COMMA_DELIMITER = ','
 
 # App Config
 APP_NAME = 'spark-etl'
@@ -111,9 +115,21 @@ def main():
 
     sampleBorderSchema = schema.TPCHSchema().getSampleBorderSchema()
 
+    sampleDotaAbilitiesUpgradeSchema = schema.TPCHSchema() \
+        .getSampleDotaAbilitiesUpgradeSchema()
+
+    df = sqlContext.read \
+        .format('com.databricks.spark.csv') \
+        .options(header='false') \
+        .options(delimiter=COMMA_DELIMITER) \
+        .load(SAMPLE_UNPROCESSED_DOTA_DATA_URL, schema=sampleDotaAbilitiesUpgradeSchema)
+
+    df.write.parquet(SAMPLE_PROCESSED_DOTA_DATA_URL)
+
     '''
-        Customer
-    '''
+    ###
+    # Customer
+    ###
     df_customer = sqlContext.read \
         .format('com.databricks.spark.csv') \
         .options(header='false') \
@@ -122,9 +138,10 @@ def main():
 
     df_customer.write.parquet(SMALL_SAMPLE_PROCESSED_DATASET_CUSTOMER_ROOT_URL)
 
-    '''
-        Lineitem
-    '''
+    
+    ###
+    # Lineitem
+    ###
 
     df_lineitem = sqlContext.read \
         .format('com.databricks.spark.csv') \
@@ -134,9 +151,9 @@ def main():
 
     df_lineitem.write.parquet(SMALL_SAMPLE_PROCESSED_DATASET_LINEITEM_ROOT_URL)
 
-    '''
-        Nation
-    '''
+    ###
+    # Nation
+    ###
 
     df_nation = sqlContext.read \
         .format('com.databricks.spark.csv') \
@@ -146,9 +163,9 @@ def main():
 
     df_nation.write.parquet(SMALL_SAMPLE_PROCESSED_DATASET_NATION_ROOT_URL)
 
-    '''
-        Order
-    '''
+    ###
+    # Order
+    ###
 
     df_order = sqlContext.read \
         .format('com.databricks.spark.csv') \
@@ -158,9 +175,9 @@ def main():
 
     df_order.write.parquet(SMALL_SAMPLE_PROCESSED_DATASET_ORDER_ROOT_URL)
 
-    '''
-        Part
-    '''
+    ###
+    # Part
+    ###
 
     df_part = sqlContext.read \
         .format('com.databricks.spark.csv') \
@@ -170,9 +187,9 @@ def main():
 
     df_part.write.parquet(SMALL_SAMPLE_PROCESSED_DATASET_PART_ROOT_URL)
 
-    '''
-        Partsupp
-    '''
+    ###
+    # Partsupp
+    ###
 
     df_partsupp = sqlContext.read \
         .format('com.databricks.spark.csv') \
@@ -182,9 +199,9 @@ def main():
 
     df_partsupp.write.parquet(SMALL_SAMPLE_PROCESSED_DATASET_PARTSUPP_ROOT_URL)
 
-    '''
-        Region
-    '''
+    ###
+    # Region
+    ###
 
     df_region = sqlContext.read \
         .format('com.databricks.spark.csv') \
@@ -194,9 +211,9 @@ def main():
 
     df_region.write.parquet(SMALL_SAMPLE_PROCESSED_DATASET_REGION_ROOT_URL)
 
-    '''
-        Supplier
-    '''
+    ###
+    # Supplier
+    ###
 
     df_supplier = sqlContext.read \
         .format('com.databricks.spark.csv') \
@@ -205,6 +222,8 @@ def main():
         .load(SMALL_SAMPLE_UNPROCESSED_DATASET_SUPPLIER_ROOT_URL, schema=supplierSchema)
 
     df_supplier.write.parquet(SMALL_SAMPLE_PROCESSED_DATASET_SUPPLIER_ROOT_URL)
+
+    '''
 
 
 if __name__ == '__main__':

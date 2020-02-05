@@ -109,3 +109,12 @@ class TPCHSchema(object):
             StructField('value', LongType(), True),
             StructField('location', StringType(), True)])
         return sampleBorderSchema
+
+    def getSampleDotaAbilitiesUpgradeSchema(self):
+        dotaAbilitiesUpgradeSchema = StructType([
+            StructField('ability', LongType(), True),
+            StructField('level', LongType(), True),
+            StructField('time', LongType(), True),
+            StructField('player_slot', LongType(), True),
+            StructField('match_id', LongType(), True)])
+        return dotaAbilitiesUpgradeSchema
