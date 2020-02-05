@@ -35,7 +35,7 @@ MEDIUM_SAMPLE_UNPROCESSED_DATASET_ROOT_URL = 's3a://sample-unprocessed/tpch/bloc
 
 # Actual Datasets
 # S3 Locations 10 GB TPCH Dataset
-SMALL_SAMPLE_UNPROCESSED_DATASET_ROOT_URL = 's3a: // optmark-unprocessed/tpch/block/1/*
+SMALL_SAMPLE_UNPROCESSED_DATASET_ROOT_URL = 's3a: // optmark-unprocessed/tpch/block/1/*'
 # S3 Locations 10 GB TPCH Dataset
 MEDIUM_SAMPLE_UNPROCESSED_DATASET_ROOT_URL = 's3a://optmark-unprocessed/tpch/block/10/*'
 # S3 Location 100 GB TPCH Dataset
