@@ -1,0 +1,759 @@
+	org.apache.curator#curator-client;2.7.1 from central in [default]
+	org.apache.curator#curator-framework;2.7.1 from central in [default]
+	org.apache.curator#curator-recipes;2.7.1 from central in [default]
+	org.apache.directory.api#api-asn1-api;1.0.0-M20 from central in [default]
+	org.apache.directory.api#api-util;1.0.0-M20 from central in [default]
+	org.apache.directory.server#apacheds-i18n;2.0.0-M15 from central in [default]
+	org.apache.directory.server#apacheds-kerberos-codec;2.0.0-M15 from central in [default]
+	org.apache.hadoop#hadoop-annotations;2.7.2 from central in [default]
+	org.apache.hadoop#hadoop-auth;2.7.2 from central in [default]
+	org.apache.hadoop#hadoop-aws;2.7.2 from central in [default]
+	org.apache.hadoop#hadoop-common;2.7.2 from central in [default]
+	org.apache.htrace#htrace-core;3.1.0-incubating from central in [default]
+	org.apache.httpcomponents#httpclient;4.2.5 from central in [default]
+	org.apache.httpcomponents#httpcore;4.2.5 from central in [default]
+	org.apache.zookeeper#zookeeper;3.4.6 from central in [default]
+	org.codehaus.jackson#jackson-core-asl;1.9.13 from central in [default]
+	org.codehaus.jackson#jackson-jaxrs;1.9.13 from central in [default]
+	org.codehaus.jackson#jackson-mapper-asl;1.9.13 from central in [default]
+	org.codehaus.jackson#jackson-xc;1.9.13 from central in [default]
+	org.codehaus.jettison#jettison;1.1 from central in [default]
+	org.hamcrest#hamcrest-core;1.3 from central in [default]
+	org.mortbay.jetty#jetty;6.1.26 from central in [default]
+	org.mortbay.jetty#jetty-util;6.1.26 from central in [default]
+	org.slf4j#slf4j-api;1.7.10 from central in [default]
+	org.slf4j#slf4j-log4j12;1.7.10 from central in [default]
+	org.tukaani#xz;1.0 from central in [default]
+	org.xerial.snappy#snappy-java;1.0.4.1 from central in [default]
+	xmlenc#xmlenc;0.52 from central in [default]
+	:: evicted modules:
+	commons-logging#commons-logging;1.1.1 by [commons-logging#commons-logging;1.1.3] in [default]
+	org.apache.httpcomponents#httpclient;4.2 by [org.apache.httpcomponents#httpclient;4.2.5] in [default]
+	org.apache.httpcomponents#httpcore;4.2 by [org.apache.httpcomponents#httpcore;4.2.5] in [default]
+	commons-codec#commons-codec;1.6 by [commons-codec#commons-codec;1.3] in [default]
+	commons-codec#commons-codec;1.3 by [commons-codec#commons-codec;1.4] in [default]
+	com.fasterxml.jackson.core#jackson-core;2.1.1 by [com.fasterxml.jackson.core#jackson-core;2.2.3] in [default]
+	com.fasterxml.jackson.core#jackson-databind;2.1.1 by [com.fasterxml.jackson.core#jackson-databind;2.2.3] in [default]
+	com.fasterxml.jackson.core#jackson-annotations;2.1.1 by [com.fasterxml.jackson.core#jackson-annotations;2.2.3] in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   78  |   1   |   0   |   8   ||   70  |   0   |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-431a9b87-6c00-4235-930f-b37e5a72e590
+	confs: [default]
+	0 artifacts copied, 70 already retrieved (0kB/26ms)
+20/02/05 06:32:56 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+20/02/05 06:32:57 INFO SparkContext: Running Spark version 2.4.4
+20/02/05 06:32:57 INFO SparkContext: Submitted application: spark-etl
+20/02/05 06:32:57 INFO SecurityManager: Changing view acls to: ubuntu
+20/02/05 06:32:57 INFO SecurityManager: Changing modify acls to: ubuntu
+20/02/05 06:32:57 INFO SecurityManager: Changing view acls groups to:
+20/02/05 06:32:57 INFO SecurityManager: Changing modify acls groups to:
+20/02/05 06:32:57 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(ubuntu); groups with view permissions: Set(); users  with modify permissions: Set(ubuntu); groups with modify permissions: Set()
+20/02/05 06:32:58 INFO Utils: Successfully started service 'sparkDriver' on port 42699.
+20/02/05 06:32:58 INFO SparkEnv: Registering MapOutputTracker
+20/02/05 06:32:58 INFO SparkEnv: Registering BlockManagerMaster
+20/02/05 06:32:58 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+20/02/05 06:32:58 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+20/02/05 06:32:58 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-40703f51-fe00-4ac6-96b0-251f0ed42925
+20/02/05 06:32:58 INFO MemoryStore: MemoryStore started with capacity 434.4 MB
+20/02/05 06:32:58 INFO SparkEnv: Registering OutputCommitCoordinator
+20/02/05 06:32:58 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+20/02/05 06:32:58 INFO SparkUI: Bound SparkUI to 0.0.0.0, and started at http://ip-10-0-0-14.us-west-2.compute.internal:4040
+20/02/05 06:32:58 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/com.amazonaws_aws-java-sdk-1.7.4.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/jars/com.amazonaws_aws-java-sdk-1.7.4.jar with timestamp 1580884378622
+20/02/05 06:32:58 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/org.apache.hadoop_hadoop-aws-2.7.2.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/jars/org.apache.hadoop_hadoop-aws-2.7.2.jar with timestamp 1580884378623
+20/02/05 06:32:58 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/joda-time_joda-time-2.10.5.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/jars/joda-time_joda-time-2.10.5.jar with timestamp 1580884378623
+20/02/05 06:32:58 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/org.apache.hadoop_hadoop-common-2.7.2.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/jars/org.apache.hadoop_hadoop-common-2.7.2.jar with timestamp 1580884378623
+20/02/05 06:32:58 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/com.fasterxml.jackson.core_jackson-databind-2.2.3.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/jars/com.fasterxml.jackson.core_jackson-databind-2.2.3.jar with timestamp 1580884378624
+20/02/05 06:32:58 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/com.fasterxml.jackson.core_jackson-annotations-2.2.3.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/jars/com.fasterxml.jackson.core_jackson-annotations-2.2.3.jar with timestamp 1580884378624
+20/02/05 06:32:58 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/org.apache.hadoop_hadoop-annotations-2.7.2.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/jars/org.apache.hadoop_hadoop-annotations-2.7.2.jar with timestamp 1580884378624
+20/02/05 06:32:58 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/com.google.guava_guava-11.0.2.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/jars/com.google.guava_guava-11.0.2.jar with timestamp 1580884378624
+20/02/05 06:32:58 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/commons-cli_commons-cli-1.2.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/jars/commons-cli_commons-cli-1.2.jar with timestamp 1580884378624
+20/02/05 06:32:58 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/org.apache.commons_commons-math3-3.1.1.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/jars/org.apache.commons_commons-math3-3.1.1.jar with timestamp 1580884378624
+20/02/05 06:32:58 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/xmlenc_xmlenc-0.52.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/jars/xmlenc_xmlenc-0.52.jar with timestamp 1580884378624
+20/02/05 06:32:58 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/commons-httpclient_commons-httpclient-3.1.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/jars/commons-httpclient_commons-httpclient-3.1.jar with timestamp 1580884378624
+20/02/05 06:32:58 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/commons-codec_commons-codec-1.4.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/jars/commons-codec_commons-codec-1.4.jar with timestamp 1580884378625
+20/02/05 06:32:58 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/commons-io_commons-io-2.4.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/jars/commons-io_commons-io-2.4.jar with timestamp 1580884378625
+20/02/05 06:32:58 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/commons-net_commons-net-3.1.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/jars/commons-net_commons-net-3.1.jar with timestamp 1580884378625
+20/02/05 06:32:58 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/commons-collections_commons-collections-3.2.2.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/jars/commons-collections_commons-collections-3.2.2.jar with timestamp 1580884378625
+20/02/05 06:32:58 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/javax.servlet_servlet-api-2.5.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/jars/javax.servlet_servlet-api-2.5.jar with timestamp 1580884378625
+20/02/05 06:32:58 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/org.mortbay.jetty_jetty-6.1.26.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/jars/org.mortbay.jetty_jetty-6.1.26.jar with timestamp 1580884378625
+20/02/05 06:32:58 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/org.mortbay.jetty_jetty-util-6.1.26.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/jars/org.mortbay.jetty_jetty-util-6.1.26.jar with timestamp 1580884378625
+20/02/05 06:32:58 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/com.sun.jersey_jersey-core-1.9.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/jars/com.sun.jersey_jersey-core-1.9.jar with timestamp 1580884378625
+20/02/05 06:32:58 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/com.sun.jersey_jersey-json-1.9.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/jars/com.sun.jersey_jersey-json-1.9.jar with timestamp 1580884378626
+20/02/05 06:32:58 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/com.sun.jersey_jersey-server-1.9.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/jars/com.sun.jersey_jersey-server-1.9.jar with timestamp 1580884378626
+20/02/05 06:32:58 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/jars/commons-logging_commons-logging-1.1.3.jar with timestamp 1580884378626
+20/02/05 06:32:58 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/log4j_log4j-1.2.17.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/jars/log4j_log4j-1.2.17.jar with timestamp 1580884378626
+20/02/05 06:32:58 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/net.java.dev.jets3t_jets3t-0.9.0.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/jars/net.java.dev.jets3t_jets3t-0.9.0.jar with timestamp 1580884378626
+20/02/05 06:32:58 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/commons-lang_commons-lang-2.6.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/jars/commons-lang_commons-lang-2.6.jar with timestamp 1580884378626
+20/02/05 06:32:58 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/commons-configuration_commons-configuration-1.6.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/jars/commons-configuration_commons-configuration-1.6.jar with timestamp 1580884378626
+20/02/05 06:32:58 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/org.slf4j_slf4j-api-1.7.10.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/jars/org.slf4j_slf4j-api-1.7.10.jar with timestamp 1580884378626
+20/02/05 06:32:58 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/org.codehaus.jackson_jackson-core-asl-1.9.13.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/jars/org.codehaus.jackson_jackson-core-asl-1.9.13.jar with timestamp 1580884378627
+20/02/05 06:32:58 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/org.codehaus.jackson_jackson-mapper-asl-1.9.13.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/jars/org.codehaus.jackson_jackson-mapper-asl-1.9.13.jar with timestamp 1580884378627
+20/02/05 06:32:58 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/org.apache.avro_avro-1.7.4.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/jars/org.apache.avro_avro-1.7.4.jar with timestamp 1580884378627
+20/02/05 06:32:58 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/com.google.protobuf_protobuf-java-2.5.0.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/jars/com.google.protobuf_protobuf-java-2.5.0.jar with timestamp 1580884378627
+20/02/05 06:32:58 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/com.google.code.gson_gson-2.2.4.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/jars/com.google.code.gson_gson-2.2.4.jar with timestamp 1580884378627
+20/02/05 06:32:58 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/org.apache.hadoop_hadoop-auth-2.7.2.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/jars/org.apache.hadoop_hadoop-auth-2.7.2.jar with timestamp 1580884378627
+20/02/05 06:32:58 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/com.jcraft_jsch-0.1.42.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/jars/com.jcraft_jsch-0.1.42.jar with timestamp 1580884378627
+20/02/05 06:32:58 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/org.apache.curator_curator-client-2.7.1.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/jars/org.apache.curator_curator-client-2.7.1.jar with timestamp 1580884378627
+20/02/05 06:32:58 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/org.apache.curator_curator-recipes-2.7.1.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/jars/org.apache.curator_curator-recipes-2.7.1.jar with timestamp 1580884378628
+20/02/05 06:32:58 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/jars/com.google.code.findbugs_jsr305-3.0.0.jar with timestamp 1580884378628
+20/02/05 06:32:58 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/org.apache.htrace_htrace-core-3.1.0-incubating.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/jars/org.apache.htrace_htrace-core-3.1.0-incubating.jar with timestamp 1580884378628
+20/02/05 06:32:58 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/org.apache.zookeeper_zookeeper-3.4.6.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/jars/org.apache.zookeeper_zookeeper-3.4.6.jar with timestamp 1580884378628
+20/02/05 06:32:58 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/org.apache.commons_commons-compress-1.4.1.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/jars/org.apache.commons_commons-compress-1.4.1.jar with timestamp 1580884378628
+20/02/05 06:32:58 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/org.codehaus.jettison_jettison-1.1.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/jars/org.codehaus.jettison_jettison-1.1.jar with timestamp 1580884378628
+20/02/05 06:32:58 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/com.sun.xml.bind_jaxb-impl-2.2.3-1.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/jars/com.sun.xml.bind_jaxb-impl-2.2.3-1.jar with timestamp 1580884378628
+20/02/05 06:32:58 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/org.codehaus.jackson_jackson-jaxrs-1.9.13.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/jars/org.codehaus.jackson_jackson-jaxrs-1.9.13.jar with timestamp 1580884378628
+20/02/05 06:32:58 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/org.codehaus.jackson_jackson-xc-1.9.13.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/jars/org.codehaus.jackson_jackson-xc-1.9.13.jar with timestamp 1580884378629
+20/02/05 06:32:58 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/javax.xml.bind_jaxb-api-2.2.2.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/jars/javax.xml.bind_jaxb-api-2.2.2.jar with timestamp 1580884378629
+20/02/05 06:32:58 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/javax.xml.stream_stax-api-1.0-2.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/jars/javax.xml.stream_stax-api-1.0-2.jar with timestamp 1580884378629
+20/02/05 06:32:58 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/javax.activation_activation-1.1.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/jars/javax.activation_activation-1.1.jar with timestamp 1580884378629
+20/02/05 06:32:58 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/asm_asm-3.2.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/jars/asm_asm-3.2.jar with timestamp 1580884378629
+20/02/05 06:32:58 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/org.apache.httpcomponents_httpclient-4.2.5.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/jars/org.apache.httpcomponents_httpclient-4.2.5.jar with timestamp 1580884378629
+20/02/05 06:32:58 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/org.apache.httpcomponents_httpcore-4.2.5.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/jars/org.apache.httpcomponents_httpcore-4.2.5.jar with timestamp 1580884378629
+20/02/05 06:32:58 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/com.jamesmurty.utils_java-xmlbuilder-0.4.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/jars/com.jamesmurty.utils_java-xmlbuilder-0.4.jar with timestamp 1580884378629
+20/02/05 06:32:58 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/commons-digester_commons-digester-1.8.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/jars/commons-digester_commons-digester-1.8.jar with timestamp 1580884378629
+20/02/05 06:32:58 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/commons-beanutils_commons-beanutils-core-1.8.0.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/jars/commons-beanutils_commons-beanutils-core-1.8.0.jar with timestamp 1580884378630
+20/02/05 06:32:58 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/commons-beanutils_commons-beanutils-1.7.0.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/jars/commons-beanutils_commons-beanutils-1.7.0.jar with timestamp 1580884378630
+20/02/05 06:32:58 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/com.thoughtworks.paranamer_paranamer-2.3.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/jars/com.thoughtworks.paranamer_paranamer-2.3.jar with timestamp 1580884378630
+20/02/05 06:32:58 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/org.xerial.snappy_snappy-java-1.0.4.1.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/jars/org.xerial.snappy_snappy-java-1.0.4.1.jar with timestamp 1580884378630
+20/02/05 06:32:58 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/org.tukaani_xz-1.0.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/jars/org.tukaani_xz-1.0.jar with timestamp 1580884378630
+20/02/05 06:32:58 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/org.apache.directory.server_apacheds-kerberos-codec-2.0.0-M15.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/jars/org.apache.directory.server_apacheds-kerberos-codec-2.0.0-M15.jar with timestamp 1580884378630
+20/02/05 06:32:58 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/org.apache.curator_curator-framework-2.7.1.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/jars/org.apache.curator_curator-framework-2.7.1.jar with timestamp 1580884378630
+20/02/05 06:32:58 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/org.apache.directory.server_apacheds-i18n-2.0.0-M15.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/jars/org.apache.directory.server_apacheds-i18n-2.0.0-M15.jar with timestamp 1580884378630
+20/02/05 06:32:58 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/org.apache.directory.api_api-asn1-api-1.0.0-M20.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/jars/org.apache.directory.api_api-asn1-api-1.0.0-M20.jar with timestamp 1580884378631
+20/02/05 06:32:58 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/org.apache.directory.api_api-util-1.0.0-M20.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/jars/org.apache.directory.api_api-util-1.0.0-M20.jar with timestamp 1580884378631
+20/02/05 06:32:58 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/org.slf4j_slf4j-log4j12-1.7.10.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/jars/org.slf4j_slf4j-log4j12-1.7.10.jar with timestamp 1580884378631
+20/02/05 06:32:58 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/io.netty_netty-3.6.2.Final.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/jars/io.netty_netty-3.6.2.Final.jar with timestamp 1580884378631
+20/02/05 06:32:58 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/javax.servlet.jsp_jsp-api-2.1.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/jars/javax.servlet.jsp_jsp-api-2.1.jar with timestamp 1580884378631
+20/02/05 06:32:58 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/jline_jline-0.9.94.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/jars/jline_jline-0.9.94.jar with timestamp 1580884378631
+20/02/05 06:32:58 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/junit_junit-4.11.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/jars/junit_junit-4.11.jar with timestamp 1580884378631
+20/02/05 06:32:58 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/org.hamcrest_hamcrest-core-1.3.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/jars/org.hamcrest_hamcrest-core-1.3.jar with timestamp 1580884378631
+20/02/05 06:32:58 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/com.fasterxml.jackson.core_jackson-core-2.2.3.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/jars/com.fasterxml.jackson.core_jackson-core-2.2.3.jar with timestamp 1580884378632
+20/02/05 06:32:58 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/com.amazonaws_aws-java-sdk-1.7.4.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/files/com.amazonaws_aws-java-sdk-1.7.4.jar with timestamp 1580884378660
+20/02/05 06:32:58 INFO Utils: Copying /home/ubuntu/.ivy2/jars/com.amazonaws_aws-java-sdk-1.7.4.jar to /tmp/spark-1ed7bd87-a161-47f2-b788-ab61fe50f67b/userFiles-33a763f3-131e-49f9-ba83-e1454ec04783/com.amazonaws_aws-java-sdk-1.7.4.jar
+20/02/05 06:32:58 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/org.apache.hadoop_hadoop-aws-2.7.2.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/files/org.apache.hadoop_hadoop-aws-2.7.2.jar with timestamp 1580884378687
+20/02/05 06:32:58 INFO Utils: Copying /home/ubuntu/.ivy2/jars/org.apache.hadoop_hadoop-aws-2.7.2.jar to /tmp/spark-1ed7bd87-a161-47f2-b788-ab61fe50f67b/userFiles-33a763f3-131e-49f9-ba83-e1454ec04783/org.apache.hadoop_hadoop-aws-2.7.2.jar
+20/02/05 06:32:58 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/joda-time_joda-time-2.10.5.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/files/joda-time_joda-time-2.10.5.jar with timestamp 1580884378696
+20/02/05 06:32:58 INFO Utils: Copying /home/ubuntu/.ivy2/jars/joda-time_joda-time-2.10.5.jar to /tmp/spark-1ed7bd87-a161-47f2-b788-ab61fe50f67b/userFiles-33a763f3-131e-49f9-ba83-e1454ec04783/joda-time_joda-time-2.10.5.jar
+20/02/05 06:32:58 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/org.apache.hadoop_hadoop-common-2.7.2.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/files/org.apache.hadoop_hadoop-common-2.7.2.jar with timestamp 1580884378703
+20/02/05 06:32:58 INFO Utils: Copying /home/ubuntu/.ivy2/jars/org.apache.hadoop_hadoop-common-2.7.2.jar to /tmp/spark-1ed7bd87-a161-47f2-b788-ab61fe50f67b/userFiles-33a763f3-131e-49f9-ba83-e1454ec04783/org.apache.hadoop_hadoop-common-2.7.2.jar
+20/02/05 06:32:58 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/com.fasterxml.jackson.core_jackson-databind-2.2.3.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/files/com.fasterxml.jackson.core_jackson-databind-2.2.3.jar with timestamp 1580884378711
+20/02/05 06:32:58 INFO Utils: Copying /home/ubuntu/.ivy2/jars/com.fasterxml.jackson.core_jackson-databind-2.2.3.jar to /tmp/spark-1ed7bd87-a161-47f2-b788-ab61fe50f67b/userFiles-33a763f3-131e-49f9-ba83-e1454ec04783/com.fasterxml.jackson.core_jackson-databind-2.2.3.jar
+20/02/05 06:32:58 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/com.fasterxml.jackson.core_jackson-annotations-2.2.3.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/files/com.fasterxml.jackson.core_jackson-annotations-2.2.3.jar with timestamp 1580884378716
+20/02/05 06:32:58 INFO Utils: Copying /home/ubuntu/.ivy2/jars/com.fasterxml.jackson.core_jackson-annotations-2.2.3.jar to /tmp/spark-1ed7bd87-a161-47f2-b788-ab61fe50f67b/userFiles-33a763f3-131e-49f9-ba83-e1454ec04783/com.fasterxml.jackson.core_jackson-annotations-2.2.3.jar
+20/02/05 06:32:58 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/org.apache.hadoop_hadoop-annotations-2.7.2.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/files/org.apache.hadoop_hadoop-annotations-2.7.2.jar with timestamp 1580884378723
+20/02/05 06:32:58 INFO Utils: Copying /home/ubuntu/.ivy2/jars/org.apache.hadoop_hadoop-annotations-2.7.2.jar to /tmp/spark-1ed7bd87-a161-47f2-b788-ab61fe50f67b/userFiles-33a763f3-131e-49f9-ba83-e1454ec04783/org.apache.hadoop_hadoop-annotations-2.7.2.jar
+20/02/05 06:32:58 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/com.google.guava_guava-11.0.2.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/files/com.google.guava_guava-11.0.2.jar with timestamp 1580884378730
+20/02/05 06:32:58 INFO Utils: Copying /home/ubuntu/.ivy2/jars/com.google.guava_guava-11.0.2.jar to /tmp/spark-1ed7bd87-a161-47f2-b788-ab61fe50f67b/userFiles-33a763f3-131e-49f9-ba83-e1454ec04783/com.google.guava_guava-11.0.2.jar
+20/02/05 06:32:58 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/commons-cli_commons-cli-1.2.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/files/commons-cli_commons-cli-1.2.jar with timestamp 1580884378744
+20/02/05 06:32:58 INFO Utils: Copying /home/ubuntu/.ivy2/jars/commons-cli_commons-cli-1.2.jar to /tmp/spark-1ed7bd87-a161-47f2-b788-ab61fe50f67b/userFiles-33a763f3-131e-49f9-ba83-e1454ec04783/commons-cli_commons-cli-1.2.jar
+20/02/05 06:32:58 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/org.apache.commons_commons-math3-3.1.1.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/files/org.apache.commons_commons-math3-3.1.1.jar with timestamp 1580884378749
+20/02/05 06:32:58 INFO Utils: Copying /home/ubuntu/.ivy2/jars/org.apache.commons_commons-math3-3.1.1.jar to /tmp/spark-1ed7bd87-a161-47f2-b788-ab61fe50f67b/userFiles-33a763f3-131e-49f9-ba83-e1454ec04783/org.apache.commons_commons-math3-3.1.1.jar
+20/02/05 06:32:58 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/xmlenc_xmlenc-0.52.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/files/xmlenc_xmlenc-0.52.jar with timestamp 1580884378756
+20/02/05 06:32:58 INFO Utils: Copying /home/ubuntu/.ivy2/jars/xmlenc_xmlenc-0.52.jar to /tmp/spark-1ed7bd87-a161-47f2-b788-ab61fe50f67b/userFiles-33a763f3-131e-49f9-ba83-e1454ec04783/xmlenc_xmlenc-0.52.jar
+20/02/05 06:32:58 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/commons-httpclient_commons-httpclient-3.1.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/files/commons-httpclient_commons-httpclient-3.1.jar with timestamp 1580884378762
+20/02/05 06:32:58 INFO Utils: Copying /home/ubuntu/.ivy2/jars/commons-httpclient_commons-httpclient-3.1.jar to /tmp/spark-1ed7bd87-a161-47f2-b788-ab61fe50f67b/userFiles-33a763f3-131e-49f9-ba83-e1454ec04783/commons-httpclient_commons-httpclient-3.1.jar
+20/02/05 06:32:58 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/commons-codec_commons-codec-1.4.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/files/commons-codec_commons-codec-1.4.jar with timestamp 1580884378780
+20/02/05 06:32:58 INFO Utils: Copying /home/ubuntu/.ivy2/jars/commons-codec_commons-codec-1.4.jar to /tmp/spark-1ed7bd87-a161-47f2-b788-ab61fe50f67b/userFiles-33a763f3-131e-49f9-ba83-e1454ec04783/commons-codec_commons-codec-1.4.jar
+20/02/05 06:32:58 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/commons-io_commons-io-2.4.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/files/commons-io_commons-io-2.4.jar with timestamp 1580884378783
+20/02/05 06:32:58 INFO Utils: Copying /home/ubuntu/.ivy2/jars/commons-io_commons-io-2.4.jar to /tmp/spark-1ed7bd87-a161-47f2-b788-ab61fe50f67b/userFiles-33a763f3-131e-49f9-ba83-e1454ec04783/commons-io_commons-io-2.4.jar
+20/02/05 06:32:58 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/commons-net_commons-net-3.1.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/files/commons-net_commons-net-3.1.jar with timestamp 1580884378786
+20/02/05 06:32:58 INFO Utils: Copying /home/ubuntu/.ivy2/jars/commons-net_commons-net-3.1.jar to /tmp/spark-1ed7bd87-a161-47f2-b788-ab61fe50f67b/userFiles-33a763f3-131e-49f9-ba83-e1454ec04783/commons-net_commons-net-3.1.jar
+20/02/05 06:32:58 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/commons-collections_commons-collections-3.2.2.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/files/commons-collections_commons-collections-3.2.2.jar with timestamp 1580884378790
+20/02/05 06:32:58 INFO Utils: Copying /home/ubuntu/.ivy2/jars/commons-collections_commons-collections-3.2.2.jar to /tmp/spark-1ed7bd87-a161-47f2-b788-ab61fe50f67b/userFiles-33a763f3-131e-49f9-ba83-e1454ec04783/commons-collections_commons-collections-3.2.2.jar
+20/02/05 06:32:58 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/javax.servlet_servlet-api-2.5.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/files/javax.servlet_servlet-api-2.5.jar with timestamp 1580884378795
+20/02/05 06:32:58 INFO Utils: Copying /home/ubuntu/.ivy2/jars/javax.servlet_servlet-api-2.5.jar to /tmp/spark-1ed7bd87-a161-47f2-b788-ab61fe50f67b/userFiles-33a763f3-131e-49f9-ba83-e1454ec04783/javax.servlet_servlet-api-2.5.jar
+20/02/05 06:32:58 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/org.mortbay.jetty_jetty-6.1.26.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/files/org.mortbay.jetty_jetty-6.1.26.jar with timestamp 1580884378806
+20/02/05 06:32:58 INFO Utils: Copying /home/ubuntu/.ivy2/jars/org.mortbay.jetty_jetty-6.1.26.jar to /tmp/spark-1ed7bd87-a161-47f2-b788-ab61fe50f67b/userFiles-33a763f3-131e-49f9-ba83-e1454ec04783/org.mortbay.jetty_jetty-6.1.26.jar
+20/02/05 06:32:58 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/org.mortbay.jetty_jetty-util-6.1.26.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/files/org.mortbay.jetty_jetty-util-6.1.26.jar with timestamp 1580884378819
+20/02/05 06:32:58 INFO Utils: Copying /home/ubuntu/.ivy2/jars/org.mortbay.jetty_jetty-util-6.1.26.jar to /tmp/spark-1ed7bd87-a161-47f2-b788-ab61fe50f67b/userFiles-33a763f3-131e-49f9-ba83-e1454ec04783/org.mortbay.jetty_jetty-util-6.1.26.jar
+20/02/05 06:32:58 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/com.sun.jersey_jersey-core-1.9.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/files/com.sun.jersey_jersey-core-1.9.jar with timestamp 1580884378827
+20/02/05 06:32:58 INFO Utils: Copying /home/ubuntu/.ivy2/jars/com.sun.jersey_jersey-core-1.9.jar to /tmp/spark-1ed7bd87-a161-47f2-b788-ab61fe50f67b/userFiles-33a763f3-131e-49f9-ba83-e1454ec04783/com.sun.jersey_jersey-core-1.9.jar
+20/02/05 06:32:58 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/com.sun.jersey_jersey-json-1.9.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/files/com.sun.jersey_jersey-json-1.9.jar with timestamp 1580884378832
+20/02/05 06:32:58 INFO Utils: Copying /home/ubuntu/.ivy2/jars/com.sun.jersey_jersey-json-1.9.jar to /tmp/spark-1ed7bd87-a161-47f2-b788-ab61fe50f67b/userFiles-33a763f3-131e-49f9-ba83-e1454ec04783/com.sun.jersey_jersey-json-1.9.jar
+20/02/05 06:32:58 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/com.sun.jersey_jersey-server-1.9.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/files/com.sun.jersey_jersey-server-1.9.jar with timestamp 1580884378839
+20/02/05 06:32:58 INFO Utils: Copying /home/ubuntu/.ivy2/jars/com.sun.jersey_jersey-server-1.9.jar to /tmp/spark-1ed7bd87-a161-47f2-b788-ab61fe50f67b/userFiles-33a763f3-131e-49f9-ba83-e1454ec04783/com.sun.jersey_jersey-server-1.9.jar
+20/02/05 06:32:58 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/files/commons-logging_commons-logging-1.1.3.jar with timestamp 1580884378844
+20/02/05 06:32:58 INFO Utils: Copying /home/ubuntu/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar to /tmp/spark-1ed7bd87-a161-47f2-b788-ab61fe50f67b/userFiles-33a763f3-131e-49f9-ba83-e1454ec04783/commons-logging_commons-logging-1.1.3.jar
+20/02/05 06:32:58 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/log4j_log4j-1.2.17.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/files/log4j_log4j-1.2.17.jar with timestamp 1580884378847
+20/02/05 06:32:58 INFO Utils: Copying /home/ubuntu/.ivy2/jars/log4j_log4j-1.2.17.jar to /tmp/spark-1ed7bd87-a161-47f2-b788-ab61fe50f67b/userFiles-33a763f3-131e-49f9-ba83-e1454ec04783/log4j_log4j-1.2.17.jar
+20/02/05 06:32:58 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/net.java.dev.jets3t_jets3t-0.9.0.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/files/net.java.dev.jets3t_jets3t-0.9.0.jar with timestamp 1580884378850
+20/02/05 06:32:58 INFO Utils: Copying /home/ubuntu/.ivy2/jars/net.java.dev.jets3t_jets3t-0.9.0.jar to /tmp/spark-1ed7bd87-a161-47f2-b788-ab61fe50f67b/userFiles-33a763f3-131e-49f9-ba83-e1454ec04783/net.java.dev.jets3t_jets3t-0.9.0.jar
+20/02/05 06:32:58 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/commons-lang_commons-lang-2.6.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/files/commons-lang_commons-lang-2.6.jar with timestamp 1580884378855
+20/02/05 06:32:58 INFO Utils: Copying /home/ubuntu/.ivy2/jars/commons-lang_commons-lang-2.6.jar to /tmp/spark-1ed7bd87-a161-47f2-b788-ab61fe50f67b/userFiles-33a763f3-131e-49f9-ba83-e1454ec04783/commons-lang_commons-lang-2.6.jar
+20/02/05 06:32:58 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/commons-configuration_commons-configuration-1.6.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/files/commons-configuration_commons-configuration-1.6.jar with timestamp 1580884378860
+20/02/05 06:32:58 INFO Utils: Copying /home/ubuntu/.ivy2/jars/commons-configuration_commons-configuration-1.6.jar to /tmp/spark-1ed7bd87-a161-47f2-b788-ab61fe50f67b/userFiles-33a763f3-131e-49f9-ba83-e1454ec04783/commons-configuration_commons-configuration-1.6.jar
+20/02/05 06:32:58 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/org.slf4j_slf4j-api-1.7.10.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/files/org.slf4j_slf4j-api-1.7.10.jar with timestamp 1580884378862
+20/02/05 06:32:58 INFO Utils: Copying /home/ubuntu/.ivy2/jars/org.slf4j_slf4j-api-1.7.10.jar to /tmp/spark-1ed7bd87-a161-47f2-b788-ab61fe50f67b/userFiles-33a763f3-131e-49f9-ba83-e1454ec04783/org.slf4j_slf4j-api-1.7.10.jar
+20/02/05 06:32:58 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/org.codehaus.jackson_jackson-core-asl-1.9.13.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/files/org.codehaus.jackson_jackson-core-asl-1.9.13.jar with timestamp 1580884378865
+20/02/05 06:32:58 INFO Utils: Copying /home/ubuntu/.ivy2/jars/org.codehaus.jackson_jackson-core-asl-1.9.13.jar to /tmp/spark-1ed7bd87-a161-47f2-b788-ab61fe50f67b/userFiles-33a763f3-131e-49f9-ba83-e1454ec04783/org.codehaus.jackson_jackson-core-asl-1.9.13.jar
+20/02/05 06:32:58 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/org.codehaus.jackson_jackson-mapper-asl-1.9.13.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/files/org.codehaus.jackson_jackson-mapper-asl-1.9.13.jar with timestamp 1580884378872
+20/02/05 06:32:58 INFO Utils: Copying /home/ubuntu/.ivy2/jars/org.codehaus.jackson_jackson-mapper-asl-1.9.13.jar to /tmp/spark-1ed7bd87-a161-47f2-b788-ab61fe50f67b/userFiles-33a763f3-131e-49f9-ba83-e1454ec04783/org.codehaus.jackson_jackson-mapper-asl-1.9.13.jar
+20/02/05 06:32:58 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/org.apache.avro_avro-1.7.4.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/files/org.apache.avro_avro-1.7.4.jar with timestamp 1580884378879
+20/02/05 06:32:58 INFO Utils: Copying /home/ubuntu/.ivy2/jars/org.apache.avro_avro-1.7.4.jar to /tmp/spark-1ed7bd87-a161-47f2-b788-ab61fe50f67b/userFiles-33a763f3-131e-49f9-ba83-e1454ec04783/org.apache.avro_avro-1.7.4.jar
+20/02/05 06:32:58 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/com.google.protobuf_protobuf-java-2.5.0.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/files/com.google.protobuf_protobuf-java-2.5.0.jar with timestamp 1580884378882
+20/02/05 06:32:58 INFO Utils: Copying /home/ubuntu/.ivy2/jars/com.google.protobuf_protobuf-java-2.5.0.jar to /tmp/spark-1ed7bd87-a161-47f2-b788-ab61fe50f67b/userFiles-33a763f3-131e-49f9-ba83-e1454ec04783/com.google.protobuf_protobuf-java-2.5.0.jar
+20/02/05 06:32:58 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/com.google.code.gson_gson-2.2.4.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/files/com.google.code.gson_gson-2.2.4.jar with timestamp 1580884378886
+20/02/05 06:32:58 INFO Utils: Copying /home/ubuntu/.ivy2/jars/com.google.code.gson_gson-2.2.4.jar to /tmp/spark-1ed7bd87-a161-47f2-b788-ab61fe50f67b/userFiles-33a763f3-131e-49f9-ba83-e1454ec04783/com.google.code.gson_gson-2.2.4.jar
+20/02/05 06:32:58 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/org.apache.hadoop_hadoop-auth-2.7.2.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/files/org.apache.hadoop_hadoop-auth-2.7.2.jar with timestamp 1580884378892
+20/02/05 06:32:58 INFO Utils: Copying /home/ubuntu/.ivy2/jars/org.apache.hadoop_hadoop-auth-2.7.2.jar to /tmp/spark-1ed7bd87-a161-47f2-b788-ab61fe50f67b/userFiles-33a763f3-131e-49f9-ba83-e1454ec04783/org.apache.hadoop_hadoop-auth-2.7.2.jar
+20/02/05 06:32:58 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/com.jcraft_jsch-0.1.42.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/files/com.jcraft_jsch-0.1.42.jar with timestamp 1580884378895
+20/02/05 06:32:58 INFO Utils: Copying /home/ubuntu/.ivy2/jars/com.jcraft_jsch-0.1.42.jar to /tmp/spark-1ed7bd87-a161-47f2-b788-ab61fe50f67b/userFiles-33a763f3-131e-49f9-ba83-e1454ec04783/com.jcraft_jsch-0.1.42.jar
+20/02/05 06:32:58 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/org.apache.curator_curator-client-2.7.1.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/files/org.apache.curator_curator-client-2.7.1.jar with timestamp 1580884378898
+20/02/05 06:32:58 INFO Utils: Copying /home/ubuntu/.ivy2/jars/org.apache.curator_curator-client-2.7.1.jar to /tmp/spark-1ed7bd87-a161-47f2-b788-ab61fe50f67b/userFiles-33a763f3-131e-49f9-ba83-e1454ec04783/org.apache.curator_curator-client-2.7.1.jar
+20/02/05 06:32:58 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/org.apache.curator_curator-recipes-2.7.1.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/files/org.apache.curator_curator-recipes-2.7.1.jar with timestamp 1580884378900
+20/02/05 06:32:58 INFO Utils: Copying /home/ubuntu/.ivy2/jars/org.apache.curator_curator-recipes-2.7.1.jar to /tmp/spark-1ed7bd87-a161-47f2-b788-ab61fe50f67b/userFiles-33a763f3-131e-49f9-ba83-e1454ec04783/org.apache.curator_curator-recipes-2.7.1.jar
+20/02/05 06:32:58 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/files/com.google.code.findbugs_jsr305-3.0.0.jar with timestamp 1580884378903
+20/02/05 06:32:58 INFO Utils: Copying /home/ubuntu/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar to /tmp/spark-1ed7bd87-a161-47f2-b788-ab61fe50f67b/userFiles-33a763f3-131e-49f9-ba83-e1454ec04783/com.google.code.findbugs_jsr305-3.0.0.jar
+20/02/05 06:32:58 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/org.apache.htrace_htrace-core-3.1.0-incubating.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/files/org.apache.htrace_htrace-core-3.1.0-incubating.jar with timestamp 1580884378907
+20/02/05 06:32:58 INFO Utils: Copying /home/ubuntu/.ivy2/jars/org.apache.htrace_htrace-core-3.1.0-incubating.jar to /tmp/spark-1ed7bd87-a161-47f2-b788-ab61fe50f67b/userFiles-33a763f3-131e-49f9-ba83-e1454ec04783/org.apache.htrace_htrace-core-3.1.0-incubating.jar
+20/02/05 06:32:58 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/org.apache.zookeeper_zookeeper-3.4.6.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/files/org.apache.zookeeper_zookeeper-3.4.6.jar with timestamp 1580884378911
+20/02/05 06:32:58 INFO Utils: Copying /home/ubuntu/.ivy2/jars/org.apache.zookeeper_zookeeper-3.4.6.jar to /tmp/spark-1ed7bd87-a161-47f2-b788-ab61fe50f67b/userFiles-33a763f3-131e-49f9-ba83-e1454ec04783/org.apache.zookeeper_zookeeper-3.4.6.jar
+20/02/05 06:32:58 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/org.apache.commons_commons-compress-1.4.1.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/files/org.apache.commons_commons-compress-1.4.1.jar with timestamp 1580884378915
+20/02/05 06:32:58 INFO Utils: Copying /home/ubuntu/.ivy2/jars/org.apache.commons_commons-compress-1.4.1.jar to /tmp/spark-1ed7bd87-a161-47f2-b788-ab61fe50f67b/userFiles-33a763f3-131e-49f9-ba83-e1454ec04783/org.apache.commons_commons-compress-1.4.1.jar
+20/02/05 06:32:58 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/org.codehaus.jettison_jettison-1.1.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/files/org.codehaus.jettison_jettison-1.1.jar with timestamp 1580884378917
+20/02/05 06:32:58 INFO Utils: Copying /home/ubuntu/.ivy2/jars/org.codehaus.jettison_jettison-1.1.jar to /tmp/spark-1ed7bd87-a161-47f2-b788-ab61fe50f67b/userFiles-33a763f3-131e-49f9-ba83-e1454ec04783/org.codehaus.jettison_jettison-1.1.jar
+20/02/05 06:32:58 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/com.sun.xml.bind_jaxb-impl-2.2.3-1.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/files/com.sun.xml.bind_jaxb-impl-2.2.3-1.jar with timestamp 1580884378920
+20/02/05 06:32:58 INFO Utils: Copying /home/ubuntu/.ivy2/jars/com.sun.xml.bind_jaxb-impl-2.2.3-1.jar to /tmp/spark-1ed7bd87-a161-47f2-b788-ab61fe50f67b/userFiles-33a763f3-131e-49f9-ba83-e1454ec04783/com.sun.xml.bind_jaxb-impl-2.2.3-1.jar
+20/02/05 06:32:58 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/org.codehaus.jackson_jackson-jaxrs-1.9.13.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/files/org.codehaus.jackson_jackson-jaxrs-1.9.13.jar with timestamp 1580884378926
+20/02/05 06:32:58 INFO Utils: Copying /home/ubuntu/.ivy2/jars/org.codehaus.jackson_jackson-jaxrs-1.9.13.jar to /tmp/spark-1ed7bd87-a161-47f2-b788-ab61fe50f67b/userFiles-33a763f3-131e-49f9-ba83-e1454ec04783/org.codehaus.jackson_jackson-jaxrs-1.9.13.jar
+20/02/05 06:32:58 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/org.codehaus.jackson_jackson-xc-1.9.13.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/files/org.codehaus.jackson_jackson-xc-1.9.13.jar with timestamp 1580884378929
+20/02/05 06:32:58 INFO Utils: Copying /home/ubuntu/.ivy2/jars/org.codehaus.jackson_jackson-xc-1.9.13.jar to /tmp/spark-1ed7bd87-a161-47f2-b788-ab61fe50f67b/userFiles-33a763f3-131e-49f9-ba83-e1454ec04783/org.codehaus.jackson_jackson-xc-1.9.13.jar
+20/02/05 06:32:58 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/javax.xml.bind_jaxb-api-2.2.2.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/files/javax.xml.bind_jaxb-api-2.2.2.jar with timestamp 1580884378931
+20/02/05 06:32:58 INFO Utils: Copying /home/ubuntu/.ivy2/jars/javax.xml.bind_jaxb-api-2.2.2.jar to /tmp/spark-1ed7bd87-a161-47f2-b788-ab61fe50f67b/userFiles-33a763f3-131e-49f9-ba83-e1454ec04783/javax.xml.bind_jaxb-api-2.2.2.jar
+20/02/05 06:32:58 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/javax.xml.stream_stax-api-1.0-2.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/files/javax.xml.stream_stax-api-1.0-2.jar with timestamp 1580884378934
+20/02/05 06:32:58 INFO Utils: Copying /home/ubuntu/.ivy2/jars/javax.xml.stream_stax-api-1.0-2.jar to /tmp/spark-1ed7bd87-a161-47f2-b788-ab61fe50f67b/userFiles-33a763f3-131e-49f9-ba83-e1454ec04783/javax.xml.stream_stax-api-1.0-2.jar
+20/02/05 06:32:58 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/javax.activation_activation-1.1.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/files/javax.activation_activation-1.1.jar with timestamp 1580884378936
+20/02/05 06:32:58 INFO Utils: Copying /home/ubuntu/.ivy2/jars/javax.activation_activation-1.1.jar to /tmp/spark-1ed7bd87-a161-47f2-b788-ab61fe50f67b/userFiles-33a763f3-131e-49f9-ba83-e1454ec04783/javax.activation_activation-1.1.jar
+20/02/05 06:32:58 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/asm_asm-3.2.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/files/asm_asm-3.2.jar with timestamp 1580884378939
+20/02/05 06:32:58 INFO Utils: Copying /home/ubuntu/.ivy2/jars/asm_asm-3.2.jar to /tmp/spark-1ed7bd87-a161-47f2-b788-ab61fe50f67b/userFiles-33a763f3-131e-49f9-ba83-e1454ec04783/asm_asm-3.2.jar
+20/02/05 06:32:58 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/org.apache.httpcomponents_httpclient-4.2.5.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/files/org.apache.httpcomponents_httpclient-4.2.5.jar with timestamp 1580884378941
+20/02/05 06:32:58 INFO Utils: Copying /home/ubuntu/.ivy2/jars/org.apache.httpcomponents_httpclient-4.2.5.jar to /tmp/spark-1ed7bd87-a161-47f2-b788-ab61fe50f67b/userFiles-33a763f3-131e-49f9-ba83-e1454ec04783/org.apache.httpcomponents_httpclient-4.2.5.jar
+20/02/05 06:32:58 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/org.apache.httpcomponents_httpcore-4.2.5.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/files/org.apache.httpcomponents_httpcore-4.2.5.jar with timestamp 1580884378944
+20/02/05 06:32:58 INFO Utils: Copying /home/ubuntu/.ivy2/jars/org.apache.httpcomponents_httpcore-4.2.5.jar to /tmp/spark-1ed7bd87-a161-47f2-b788-ab61fe50f67b/userFiles-33a763f3-131e-49f9-ba83-e1454ec04783/org.apache.httpcomponents_httpcore-4.2.5.jar
+20/02/05 06:32:58 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/com.jamesmurty.utils_java-xmlbuilder-0.4.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/files/com.jamesmurty.utils_java-xmlbuilder-0.4.jar with timestamp 1580884378947
+20/02/05 06:32:58 INFO Utils: Copying /home/ubuntu/.ivy2/jars/com.jamesmurty.utils_java-xmlbuilder-0.4.jar to /tmp/spark-1ed7bd87-a161-47f2-b788-ab61fe50f67b/userFiles-33a763f3-131e-49f9-ba83-e1454ec04783/com.jamesmurty.utils_java-xmlbuilder-0.4.jar
+20/02/05 06:32:58 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/commons-digester_commons-digester-1.8.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/files/commons-digester_commons-digester-1.8.jar with timestamp 1580884378950
+20/02/05 06:32:58 INFO Utils: Copying /home/ubuntu/.ivy2/jars/commons-digester_commons-digester-1.8.jar to /tmp/spark-1ed7bd87-a161-47f2-b788-ab61fe50f67b/userFiles-33a763f3-131e-49f9-ba83-e1454ec04783/commons-digester_commons-digester-1.8.jar
+20/02/05 06:32:58 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/commons-beanutils_commons-beanutils-core-1.8.0.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/files/commons-beanutils_commons-beanutils-core-1.8.0.jar with timestamp 1580884378952
+20/02/05 06:32:58 INFO Utils: Copying /home/ubuntu/.ivy2/jars/commons-beanutils_commons-beanutils-core-1.8.0.jar to /tmp/spark-1ed7bd87-a161-47f2-b788-ab61fe50f67b/userFiles-33a763f3-131e-49f9-ba83-e1454ec04783/commons-beanutils_commons-beanutils-core-1.8.0.jar
+20/02/05 06:32:58 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/commons-beanutils_commons-beanutils-1.7.0.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/files/commons-beanutils_commons-beanutils-1.7.0.jar with timestamp 1580884378956
+20/02/05 06:32:58 INFO Utils: Copying /home/ubuntu/.ivy2/jars/commons-beanutils_commons-beanutils-1.7.0.jar to /tmp/spark-1ed7bd87-a161-47f2-b788-ab61fe50f67b/userFiles-33a763f3-131e-49f9-ba83-e1454ec04783/commons-beanutils_commons-beanutils-1.7.0.jar
+20/02/05 06:32:58 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/com.thoughtworks.paranamer_paranamer-2.3.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/files/com.thoughtworks.paranamer_paranamer-2.3.jar with timestamp 1580884378959
+20/02/05 06:32:58 INFO Utils: Copying /home/ubuntu/.ivy2/jars/com.thoughtworks.paranamer_paranamer-2.3.jar to /tmp/spark-1ed7bd87-a161-47f2-b788-ab61fe50f67b/userFiles-33a763f3-131e-49f9-ba83-e1454ec04783/com.thoughtworks.paranamer_paranamer-2.3.jar
+20/02/05 06:32:58 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/org.xerial.snappy_snappy-java-1.0.4.1.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/files/org.xerial.snappy_snappy-java-1.0.4.1.jar with timestamp 1580884378963
+20/02/05 06:32:58 INFO Utils: Copying /home/ubuntu/.ivy2/jars/org.xerial.snappy_snappy-java-1.0.4.1.jar to /tmp/spark-1ed7bd87-a161-47f2-b788-ab61fe50f67b/userFiles-33a763f3-131e-49f9-ba83-e1454ec04783/org.xerial.snappy_snappy-java-1.0.4.1.jar
+20/02/05 06:32:58 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/org.tukaani_xz-1.0.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/files/org.tukaani_xz-1.0.jar with timestamp 1580884378967
+20/02/05 06:32:58 INFO Utils: Copying /home/ubuntu/.ivy2/jars/org.tukaani_xz-1.0.jar to /tmp/spark-1ed7bd87-a161-47f2-b788-ab61fe50f67b/userFiles-33a763f3-131e-49f9-ba83-e1454ec04783/org.tukaani_xz-1.0.jar
+20/02/05 06:32:58 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/org.apache.directory.server_apacheds-kerberos-codec-2.0.0-M15.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/files/org.apache.directory.server_apacheds-kerberos-codec-2.0.0-M15.jar with timestamp 1580884378969
+20/02/05 06:32:58 INFO Utils: Copying /home/ubuntu/.ivy2/jars/org.apache.directory.server_apacheds-kerberos-codec-2.0.0-M15.jar to /tmp/spark-1ed7bd87-a161-47f2-b788-ab61fe50f67b/userFiles-33a763f3-131e-49f9-ba83-e1454ec04783/org.apache.directory.server_apacheds-kerberos-codec-2.0.0-M15.jar
+20/02/05 06:32:58 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/org.apache.curator_curator-framework-2.7.1.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/files/org.apache.curator_curator-framework-2.7.1.jar with timestamp 1580884378972
+20/02/05 06:32:58 INFO Utils: Copying /home/ubuntu/.ivy2/jars/org.apache.curator_curator-framework-2.7.1.jar to /tmp/spark-1ed7bd87-a161-47f2-b788-ab61fe50f67b/userFiles-33a763f3-131e-49f9-ba83-e1454ec04783/org.apache.curator_curator-framework-2.7.1.jar
+20/02/05 06:32:58 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/org.apache.directory.server_apacheds-i18n-2.0.0-M15.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/files/org.apache.directory.server_apacheds-i18n-2.0.0-M15.jar with timestamp 1580884378974
+20/02/05 06:32:58 INFO Utils: Copying /home/ubuntu/.ivy2/jars/org.apache.directory.server_apacheds-i18n-2.0.0-M15.jar to /tmp/spark-1ed7bd87-a161-47f2-b788-ab61fe50f67b/userFiles-33a763f3-131e-49f9-ba83-e1454ec04783/org.apache.directory.server_apacheds-i18n-2.0.0-M15.jar
+20/02/05 06:32:58 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/org.apache.directory.api_api-asn1-api-1.0.0-M20.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/files/org.apache.directory.api_api-asn1-api-1.0.0-M20.jar with timestamp 1580884378977
+20/02/05 06:32:58 INFO Utils: Copying /home/ubuntu/.ivy2/jars/org.apache.directory.api_api-asn1-api-1.0.0-M20.jar to /tmp/spark-1ed7bd87-a161-47f2-b788-ab61fe50f67b/userFiles-33a763f3-131e-49f9-ba83-e1454ec04783/org.apache.directory.api_api-asn1-api-1.0.0-M20.jar
+20/02/05 06:32:58 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/org.apache.directory.api_api-util-1.0.0-M20.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/files/org.apache.directory.api_api-util-1.0.0-M20.jar with timestamp 1580884378979
+20/02/05 06:32:58 INFO Utils: Copying /home/ubuntu/.ivy2/jars/org.apache.directory.api_api-util-1.0.0-M20.jar to /tmp/spark-1ed7bd87-a161-47f2-b788-ab61fe50f67b/userFiles-33a763f3-131e-49f9-ba83-e1454ec04783/org.apache.directory.api_api-util-1.0.0-M20.jar
+20/02/05 06:32:58 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/org.slf4j_slf4j-log4j12-1.7.10.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/files/org.slf4j_slf4j-log4j12-1.7.10.jar with timestamp 1580884378981
+20/02/05 06:32:58 INFO Utils: Copying /home/ubuntu/.ivy2/jars/org.slf4j_slf4j-log4j12-1.7.10.jar to /tmp/spark-1ed7bd87-a161-47f2-b788-ab61fe50f67b/userFiles-33a763f3-131e-49f9-ba83-e1454ec04783/org.slf4j_slf4j-log4j12-1.7.10.jar
+20/02/05 06:32:58 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/io.netty_netty-3.6.2.Final.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/files/io.netty_netty-3.6.2.Final.jar with timestamp 1580884378984
+20/02/05 06:32:58 INFO Utils: Copying /home/ubuntu/.ivy2/jars/io.netty_netty-3.6.2.Final.jar to /tmp/spark-1ed7bd87-a161-47f2-b788-ab61fe50f67b/userFiles-33a763f3-131e-49f9-ba83-e1454ec04783/io.netty_netty-3.6.2.Final.jar
+20/02/05 06:32:58 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/javax.servlet.jsp_jsp-api-2.1.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/files/javax.servlet.jsp_jsp-api-2.1.jar with timestamp 1580884378987
+20/02/05 06:32:58 INFO Utils: Copying /home/ubuntu/.ivy2/jars/javax.servlet.jsp_jsp-api-2.1.jar to /tmp/spark-1ed7bd87-a161-47f2-b788-ab61fe50f67b/userFiles-33a763f3-131e-49f9-ba83-e1454ec04783/javax.servlet.jsp_jsp-api-2.1.jar
+20/02/05 06:32:58 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/jline_jline-0.9.94.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/files/jline_jline-0.9.94.jar with timestamp 1580884378990
+20/02/05 06:32:58 INFO Utils: Copying /home/ubuntu/.ivy2/jars/jline_jline-0.9.94.jar to /tmp/spark-1ed7bd87-a161-47f2-b788-ab61fe50f67b/userFiles-33a763f3-131e-49f9-ba83-e1454ec04783/jline_jline-0.9.94.jar
+20/02/05 06:32:58 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/junit_junit-4.11.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/files/junit_junit-4.11.jar with timestamp 1580884378992
+20/02/05 06:32:58 INFO Utils: Copying /home/ubuntu/.ivy2/jars/junit_junit-4.11.jar to /tmp/spark-1ed7bd87-a161-47f2-b788-ab61fe50f67b/userFiles-33a763f3-131e-49f9-ba83-e1454ec04783/junit_junit-4.11.jar
+20/02/05 06:32:58 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/org.hamcrest_hamcrest-core-1.3.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/files/org.hamcrest_hamcrest-core-1.3.jar with timestamp 1580884378995
+20/02/05 06:32:58 INFO Utils: Copying /home/ubuntu/.ivy2/jars/org.hamcrest_hamcrest-core-1.3.jar to /tmp/spark-1ed7bd87-a161-47f2-b788-ab61fe50f67b/userFiles-33a763f3-131e-49f9-ba83-e1454ec04783/org.hamcrest_hamcrest-core-1.3.jar
+20/02/05 06:32:58 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/com.fasterxml.jackson.core_jackson-core-2.2.3.jar at spark://ip-10-0-0-14.us-west-2.compute.internal:42699/files/com.fasterxml.jackson.core_jackson-core-2.2.3.jar with timestamp 1580884378997
+20/02/05 06:32:58 INFO Utils: Copying /home/ubuntu/.ivy2/jars/com.fasterxml.jackson.core_jackson-core-2.2.3.jar to /tmp/spark-1ed7bd87-a161-47f2-b788-ab61fe50f67b/userFiles-33a763f3-131e-49f9-ba83-e1454ec04783/com.fasterxml.jackson.core_jackson-core-2.2.3.jar
+20/02/05 06:32:59 INFO StandaloneAppClient$ClientEndpoint: Connecting to master spark://10.0.0.14:7077...
+20/02/05 06:32:59 INFO TransportClientFactory: Successfully created connection to /10.0.0.14:7077 after 31 ms (0 ms spent in bootstraps)
+20/02/05 06:32:59 INFO StandaloneSchedulerBackend: Connected to Spark cluster with app ID app-20200205063259-0005
+20/02/05 06:32:59 INFO StandaloneAppClient$ClientEndpoint: Executor added: app-20200205063259-0005/0 on worker-20200203205253-10.0.0.5-34563 (10.0.0.5:34563) with 2 core(s)
+20/02/05 06:32:59 INFO StandaloneSchedulerBackend: Granted executor ID app-20200205063259-0005/0 on hostPort 10.0.0.5:34563 with 2 core(s), 5.0 GB RAM
+20/02/05 06:32:59 INFO StandaloneAppClient$ClientEndpoint: Executor added: app-20200205063259-0005/1 on worker-20200203205237-10.0.0.11-41853 (10.0.0.11:41853) with 2 core(s)
+20/02/05 06:32:59 INFO StandaloneSchedulerBackend: Granted executor ID app-20200205063259-0005/1 on hostPort 10.0.0.11:41853 with 2 core(s), 5.0 GB RAM
+20/02/05 06:32:59 INFO StandaloneAppClient$ClientEndpoint: Executor updated: app-20200205063259-0005/1 is now RUNNING
+20/02/05 06:32:59 INFO StandaloneAppClient$ClientEndpoint: Executor updated: app-20200205063259-0005/0 is now RUNNING
+20/02/05 06:32:59 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 40049.
+20/02/05 06:32:59 INFO NettyBlockTransferService: Server created on ip-10-0-0-14.us-west-2.compute.internal:40049
+20/02/05 06:32:59 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+20/02/05 06:32:59 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, ip-10-0-0-14.us-west-2.compute.internal, 40049, None)
+20/02/05 06:32:59 INFO BlockManagerMasterEndpoint: Registering block manager ip-10-0-0-14.us-west-2.compute.internal:40049 with 434.4 MB RAM, BlockManagerId(driver, ip-10-0-0-14.us-west-2.compute.internal, 40049, None)
+20/02/05 06:32:59 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, ip-10-0-0-14.us-west-2.compute.internal, 40049, None)
+20/02/05 06:32:59 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, ip-10-0-0-14.us-west-2.compute.internal, 40049, None)
+20/02/05 06:32:59 INFO StandaloneSchedulerBackend: SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.0
+20/02/05 06:32:59 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir ('file:/home/ubuntu/perf-ops/src/spark-warehouse').
+20/02/05 06:32:59 INFO SharedState: Warehouse path is 'file:/home/ubuntu/perf-ops/src/spark-warehouse'.
+20/02/05 06:33:00 INFO StateStoreCoordinatorRef: Registered StateStoreCoordinator endpoint
+20/02/05 06:33:02 INFO CoarseGrainedSchedulerBackend$DriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.0.0.11:38810) with ID 1
+20/02/05 06:33:02 INFO FileSourceStrategy: Pruning directories with:
+20/02/05 06:33:02 INFO FileSourceStrategy: Post-Scan Filters:
+20/02/05 06:33:02 INFO FileSourceStrategy: Output Data Schema: struct<c_custkey: string, c_name: string, c_address: string, c_nationkey: string, c_phone: string ... 6 more fields>
+20/02/05 06:33:02 INFO FileSourceScanExec: Pushed Filters:
+20/02/05 06:33:02 INFO CoarseGrainedSchedulerBackend$DriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.0.0.5:54536) with ID 0
+20/02/05 06:33:02 INFO BlockManagerMasterEndpoint: Registering block manager 10.0.0.11:34843 with 2.8 GB RAM, BlockManagerId(1, 10.0.0.11, 34843, None)
+20/02/05 06:33:02 INFO BlockManagerMasterEndpoint: Registering block manager 10.0.0.5:37163 with 2.8 GB RAM, BlockManagerId(0, 10.0.0.5, 37163, None)
+20/02/05 06:33:02 INFO ParquetFileFormat: Using default output committer for Parquet: org.apache.parquet.hadoop.ParquetOutputCommitter
+20/02/05 06:33:02 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/02/05 06:33:02 INFO SQLHadoopMapReduceCommitProtocol: Using user defined output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+20/02/05 06:33:02 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+20/02/05 06:33:02 INFO SQLHadoopMapReduceCommitProtocol: Using output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+20/02/05 06:33:03 INFO CodeGenerator: Code generated in 161.582905 ms
+20/02/05 06:33:03 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 194.7 KB, free 434.2 MB)
+20/02/05 06:33:03 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 28.4 KB, free 434.2 MB)
+20/02/05 06:33:03 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on ip-10-0-0-14.us-west-2.compute.internal:40049 (size: 28.4 KB, free: 434.4 MB)
+20/02/05 06:33:03 INFO SparkContext: Created broadcast 0 from parquet at NativeMethodAccessorImpl.java:0
+20/02/05 06:33:03 INFO FileSourceScanExec: Planning scan with bin packing, max size: 7135112 bytes, open cost is considered as scanning 4194304 bytes.
+20/02/05 06:33:03 INFO SparkContext: Starting job: parquet at NativeMethodAccessorImpl.java:0
+20/02/05 06:33:03 INFO DAGScheduler: Got job 0 (parquet at NativeMethodAccessorImpl.java:0) with 4 output partitions
+20/02/05 06:33:03 INFO DAGScheduler: Final stage: ResultStage 0 (parquet at NativeMethodAccessorImpl.java:0)
+20/02/05 06:33:03 INFO DAGScheduler: Parents of final stage: List()
+20/02/05 06:33:03 INFO DAGScheduler: Missing parents: List()
+20/02/05 06:33:03 INFO DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[1] at parquet at NativeMethodAccessorImpl.java:0), which has no missing parents
+20/02/05 06:33:03 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 189.4 KB, free 434.0 MB)
+20/02/05 06:33:03 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 66.4 KB, free 433.9 MB)
+20/02/05 06:33:03 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on ip-10-0-0-14.us-west-2.compute.internal:40049 (size: 66.4 KB, free: 434.3 MB)
+20/02/05 06:33:03 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1161
+20/02/05 06:33:03 INFO DAGScheduler: Submitting 4 missing tasks from ResultStage 0 (MapPartitionsRDD[1] at parquet at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0, 1, 2, 3))
+20/02/05 06:33:03 INFO TaskSchedulerImpl: Adding task set 0.0 with 4 tasks
+20/02/05 06:33:03 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, 10.0.0.11, executor 1, partition 0, PROCESS_LOCAL, 8270 bytes)
+20/02/05 06:33:03 INFO TaskSetManager: Starting task 1.0 in stage 0.0 (TID 1, 10.0.0.5, executor 0, partition 1, PROCESS_LOCAL, 8270 bytes)
+20/02/05 06:33:03 INFO TaskSetManager: Starting task 2.0 in stage 0.0 (TID 2, 10.0.0.11, executor 1, partition 2, PROCESS_LOCAL, 8270 bytes)
+20/02/05 06:33:03 INFO TaskSetManager: Starting task 3.0 in stage 0.0 (TID 3, 10.0.0.5, executor 0, partition 3, PROCESS_LOCAL, 8270 bytes)
+20/02/05 06:33:05 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on 10.0.0.5:37163 (size: 66.4 KB, free: 2.8 GB)
+20/02/05 06:33:05 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on 10.0.0.11:34843 (size: 66.4 KB, free: 2.8 GB)
+20/02/05 06:33:08 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on 10.0.0.5:37163 (size: 28.4 KB, free: 2.8 GB)
+20/02/05 06:33:08 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on 10.0.0.11:34843 (size: 28.4 KB, free: 2.8 GB)
+20/02/05 06:33:13 INFO TaskSetManager: Finished task 3.0 in stage 0.0 (TID 3) in 9848 ms on 10.0.0.5 (executor 0) (1/4)
+20/02/05 06:33:14 WARN TaskSetManager: Lost task 1.0 in stage 0.0 (TID 1, 10.0.0.5, executor 0): org.apache.spark.SparkException: Task failed while writing rows.
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.org$apache$spark$sql$execution$datasources$FileFormatWriter$$executeTask(FileFormatWriter.scala:257)
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$$anonfun$write$1.apply(FileFormatWriter.scala:170)
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$$anonfun$write$1.apply(FileFormatWriter.scala:169)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:123)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:408)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:414)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.apache.http.ConnectionClosedException: Premature end of Content-Length delimited message body (expected: 17211032; received: 7145390
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:178)
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:198)
+	at org.apache.http.impl.io.ContentLengthInputStream.close(ContentLengthInputStream.java:101)
+	at org.apache.http.conn.BasicManagedEntity.streamClosed(BasicManagedEntity.java:166)
+	at org.apache.http.conn.EofSensorInputStream.checkClose(EofSensorInputStream.java:228)
+	at org.apache.http.conn.EofSensorInputStream.close(EofSensorInputStream.java:172)
+	at java.base/java.io.FilterInputStream.close(FilterInputStream.java:180)
+	at java.base/java.io.FilterInputStream.close(FilterInputStream.java:180)
+	at java.base/java.io.FilterInputStream.close(FilterInputStream.java:180)
+	at java.base/java.io.FilterInputStream.close(FilterInputStream.java:180)
+	at com.amazonaws.services.s3.model.S3ObjectInputStream.abort(S3ObjectInputStream.java:90)
+	at org.apache.hadoop.fs.s3a.S3AInputStream.close(S3AInputStream.java:199)
+	at java.base/java.io.FilterInputStream.close(FilterInputStream.java:180)
+	at org.apache.hadoop.util.LineReader.close(LineReader.java:150)
+	at org.apache.hadoop.mapreduce.lib.input.LineRecordReader.close(LineRecordReader.java:231)
+	at org.apache.spark.sql.execution.datasources.RecordReaderIterator.close(RecordReaderIterator.scala:62)
+	at org.apache.spark.sql.execution.datasources.RecordReaderIterator.hasNext(RecordReaderIterator.scala:44)
+	at org.apache.spark.sql.execution.datasources.HadoopFileLinesReader.hasNext(HadoopFileLinesReader.scala:69)
+	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:409)
+	at scala.collection.Iterator$$anon$13.hasNext(Iterator.scala:462)
+	at scala.collection.Iterator$$anon$12.hasNext(Iterator.scala:440)
+	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:409)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:101)
+	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage1.processNext(Unknown Source)
+	at org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+	at org.apache.spark.sql.execution.WholeStageCodegenExec$$anonfun$13$$anon$1.hasNext(WholeStageCodegenExec.scala:636)
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$$anonfun$org$apache$spark$sql$execution$datasources$FileFormatWriter$$executeTask$3.apply(FileFormatWriter.scala:244)
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$$anonfun$org$apache$spark$sql$execution$datasources$FileFormatWriter$$executeTask$3.apply(FileFormatWriter.scala:242)
+	at org.apache.spark.util.Utils$.tryWithSafeFinallyAndFailureCallbacks(Utils.scala:1394)
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.org$apache$spark$sql$execution$datasources$FileFormatWriter$$executeTask(FileFormatWriter.scala:248)
+	... 10 more
+
+20/02/05 06:33:14 INFO TaskSetManager: Starting task 1.1 in stage 0.0 (TID 4, 10.0.0.5, executor 0, partition 1, PROCESS_LOCAL, 8270 bytes)
+20/02/05 06:33:14 INFO TaskSetManager: Lost task 0.0 in stage 0.0 (TID 0) on 10.0.0.11, executor 1: org.apache.spark.SparkException (Task failed while writing rows.) [duplicate 1]
+20/02/05 06:33:14 INFO TaskSetManager: Starting task 0.1 in stage 0.0 (TID 5, 10.0.0.11, executor 1, partition 0, PROCESS_LOCAL, 8270 bytes)
+20/02/05 06:33:14 INFO TaskSetManager: Lost task 2.0 in stage 0.0 (TID 2) on 10.0.0.11, executor 1: org.apache.spark.SparkException (Task failed while writing rows.) [duplicate 2]
+20/02/05 06:33:14 INFO TaskSetManager: Starting task 2.1 in stage 0.0 (TID 6, 10.0.0.11, executor 1, partition 2, PROCESS_LOCAL, 8270 bytes)
+20/02/05 06:33:16 INFO TaskSetManager: Lost task 1.1 in stage 0.0 (TID 4) on 10.0.0.5, executor 0: org.apache.spark.SparkException (Task failed while writing rows.) [duplicate 3]
+20/02/05 06:33:16 INFO TaskSetManager: Starting task 1.2 in stage 0.0 (TID 7, 10.0.0.5, executor 0, partition 1, PROCESS_LOCAL, 8270 bytes)
+20/02/05 06:33:18 INFO TaskSetManager: Lost task 2.1 in stage 0.0 (TID 6) on 10.0.0.11, executor 1: org.apache.spark.SparkException (Task failed while writing rows.) [duplicate 4]
+20/02/05 06:33:18 INFO TaskSetManager: Starting task 2.2 in stage 0.0 (TID 8, 10.0.0.11, executor 1, partition 2, PROCESS_LOCAL, 8270 bytes)
+20/02/05 06:33:18 INFO TaskSetManager: Lost task 0.1 in stage 0.0 (TID 5) on 10.0.0.11, executor 1: org.apache.spark.SparkException (Task failed while writing rows.) [duplicate 5]
+20/02/05 06:33:18 INFO TaskSetManager: Starting task 0.2 in stage 0.0 (TID 9, 10.0.0.5, executor 0, partition 0, PROCESS_LOCAL, 8270 bytes)
+20/02/05 06:33:18 INFO TaskSetManager: Lost task 1.2 in stage 0.0 (TID 7) on 10.0.0.5, executor 0: org.apache.spark.SparkException (Task failed while writing rows.) [duplicate 6]
+20/02/05 06:33:18 INFO TaskSetManager: Starting task 1.3 in stage 0.0 (TID 10, 10.0.0.5, executor 0, partition 1, PROCESS_LOCAL, 8270 bytes)
+20/02/05 06:33:20 INFO TaskSetManager: Lost task 2.2 in stage 0.0 (TID 8) on 10.0.0.11, executor 1: org.apache.spark.SparkException (Task failed while writing rows.) [duplicate 7]
+20/02/05 06:33:20 INFO TaskSetManager: Starting task 2.3 in stage 0.0 (TID 11, 10.0.0.11, executor 1, partition 2, PROCESS_LOCAL, 8270 bytes)
+20/02/05 06:33:21 INFO TaskSetManager: Lost task 0.2 in stage 0.0 (TID 9) on 10.0.0.5, executor 0: org.apache.spark.SparkException (Task failed while writing rows.) [duplicate 8]
+20/02/05 06:33:21 INFO TaskSetManager: Starting task 0.3 in stage 0.0 (TID 12, 10.0.0.5, executor 0, partition 0, PROCESS_LOCAL, 8270 bytes)
+20/02/05 06:33:21 INFO TaskSetManager: Lost task 1.3 in stage 0.0 (TID 10) on 10.0.0.5, executor 0: org.apache.spark.SparkException (Task failed while writing rows.) [duplicate 9]
+20/02/05 06:33:21 ERROR TaskSetManager: Task 1 in stage 0.0 failed 4 times; aborting job
+20/02/05 06:33:21 INFO TaskSchedulerImpl: Cancelling stage 0
+20/02/05 06:33:21 INFO TaskSchedulerImpl: Killing all running tasks in stage 0: Stage cancelled
+20/02/05 06:33:21 INFO TaskSchedulerImpl: Stage 0 was cancelled
+20/02/05 06:33:21 INFO DAGScheduler: ResultStage 0 (parquet at NativeMethodAccessorImpl.java:0) failed in 17.823 s due to Job aborted due to stage failure: Task 1 in stage 0.0 failed 4 times, most recent failure: Lost task 1.3 in stage 0.0 (TID 10, 10.0.0.5, executor 0): org.apache.spark.SparkException: Task failed while writing rows.
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.org$apache$spark$sql$execution$datasources$FileFormatWriter$$executeTask(FileFormatWriter.scala:257)
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$$anonfun$write$1.apply(FileFormatWriter.scala:170)
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$$anonfun$write$1.apply(FileFormatWriter.scala:169)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:123)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:408)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:414)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.apache.http.ConnectionClosedException: Premature end of Content-Length delimited message body (expected: 17211032; received: 7135798
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:178)
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:198)
+	at org.apache.http.impl.io.ContentLengthInputStream.close(ContentLengthInputStream.java:101)
+	at org.apache.http.conn.BasicManagedEntity.streamClosed(BasicManagedEntity.java:166)
+	at org.apache.http.conn.EofSensorInputStream.checkClose(EofSensorInputStream.java:228)
+	at org.apache.http.conn.EofSensorInputStream.close(EofSensorInputStream.java:172)
+	at java.base/java.io.FilterInputStream.close(FilterInputStream.java:180)
+	at java.base/java.io.FilterInputStream.close(FilterInputStream.java:180)
+	at java.base/java.io.FilterInputStream.close(FilterInputStream.java:180)
+	at java.base/java.io.FilterInputStream.close(FilterInputStream.java:180)
+	at com.amazonaws.services.s3.model.S3ObjectInputStream.abort(S3ObjectInputStream.java:90)
+	at org.apache.hadoop.fs.s3a.S3AInputStream.close(S3AInputStream.java:199)
+	at java.base/java.io.FilterInputStream.close(FilterInputStream.java:180)
+	at org.apache.hadoop.util.LineReader.close(LineReader.java:150)
+	at org.apache.hadoop.mapreduce.lib.input.LineRecordReader.close(LineRecordReader.java:231)
+	at org.apache.spark.sql.execution.datasources.RecordReaderIterator.close(RecordReaderIterator.scala:62)
+	at org.apache.spark.sql.execution.datasources.RecordReaderIterator.hasNext(RecordReaderIterator.scala:44)
+	at org.apache.spark.sql.execution.datasources.HadoopFileLinesReader.hasNext(HadoopFileLinesReader.scala:69)
+	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:409)
+	at scala.collection.Iterator$$anon$13.hasNext(Iterator.scala:462)
+	at scala.collection.Iterator$$anon$12.hasNext(Iterator.scala:440)
+	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:409)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:101)
+	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage1.processNext(Unknown Source)
+	at org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+	at org.apache.spark.sql.execution.WholeStageCodegenExec$$anonfun$13$$anon$1.hasNext(WholeStageCodegenExec.scala:636)
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$$anonfun$org$apache$spark$sql$execution$datasources$FileFormatWriter$$executeTask$3.apply(FileFormatWriter.scala:244)
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$$anonfun$org$apache$spark$sql$execution$datasources$FileFormatWriter$$executeTask$3.apply(FileFormatWriter.scala:242)
+	at org.apache.spark.util.Utils$.tryWithSafeFinallyAndFailureCallbacks(Utils.scala:1394)
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.org$apache$spark$sql$execution$datasources$FileFormatWriter$$executeTask(FileFormatWriter.scala:248)
+	... 10 more
+
+Driver stacktrace:
+20/02/05 06:33:21 INFO DAGScheduler: Job 0 failed: parquet at NativeMethodAccessorImpl.java:0, took 17.869172 s
+20/02/05 06:33:21 ERROR FileFormatWriter: Aborting job bc0af805-d37b-49fa-b43e-7d997bb373a1.
+org.apache.spark.SparkException: Job aborted due to stage failure: Task 1 in stage 0.0 failed 4 times, most recent failure: Lost task 1.3 in stage 0.0 (TID 10, 10.0.0.5, executor 0): org.apache.spark.SparkException: Task failed while writing rows.
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.org$apache$spark$sql$execution$datasources$FileFormatWriter$$executeTask(FileFormatWriter.scala:257)
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$$anonfun$write$1.apply(FileFormatWriter.scala:170)
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$$anonfun$write$1.apply(FileFormatWriter.scala:169)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:123)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:408)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:414)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.apache.http.ConnectionClosedException: Premature end of Content-Length delimited message body (expected: 17211032; received: 7135798
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:178)
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:198)
+	at org.apache.http.impl.io.ContentLengthInputStream.close(ContentLengthInputStream.java:101)
+	at org.apache.http.conn.BasicManagedEntity.streamClosed(BasicManagedEntity.java:166)
+	at org.apache.http.conn.EofSensorInputStream.checkClose(EofSensorInputStream.java:228)
+	at org.apache.http.conn.EofSensorInputStream.close(EofSensorInputStream.java:172)
+	at java.base/java.io.FilterInputStream.close(FilterInputStream.java:180)
+	at java.base/java.io.FilterInputStream.close(FilterInputStream.java:180)
+	at java.base/java.io.FilterInputStream.close(FilterInputStream.java:180)
+	at java.base/java.io.FilterInputStream.close(FilterInputStream.java:180)
+	at com.amazonaws.services.s3.model.S3ObjectInputStream.abort(S3ObjectInputStream.java:90)
+	at org.apache.hadoop.fs.s3a.S3AInputStream.close(S3AInputStream.java:199)
+	at java.base/java.io.FilterInputStream.close(FilterInputStream.java:180)
+	at org.apache.hadoop.util.LineReader.close(LineReader.java:150)
+	at org.apache.hadoop.mapreduce.lib.input.LineRecordReader.close(LineRecordReader.java:231)
+	at org.apache.spark.sql.execution.datasources.RecordReaderIterator.close(RecordReaderIterator.scala:62)
+	at org.apache.spark.sql.execution.datasources.RecordReaderIterator.hasNext(RecordReaderIterator.scala:44)
+	at org.apache.spark.sql.execution.datasources.HadoopFileLinesReader.hasNext(HadoopFileLinesReader.scala:69)
+	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:409)
+	at scala.collection.Iterator$$anon$13.hasNext(Iterator.scala:462)
+	at scala.collection.Iterator$$anon$12.hasNext(Iterator.scala:440)
+	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:409)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:101)
+	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage1.processNext(Unknown Source)
+	at org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+	at org.apache.spark.sql.execution.WholeStageCodegenExec$$anonfun$13$$anon$1.hasNext(WholeStageCodegenExec.scala:636)
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$$anonfun$org$apache$spark$sql$execution$datasources$FileFormatWriter$$executeTask$3.apply(FileFormatWriter.scala:244)
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$$anonfun$org$apache$spark$sql$execution$datasources$FileFormatWriter$$executeTask$3.apply(FileFormatWriter.scala:242)
+	at org.apache.spark.util.Utils$.tryWithSafeFinallyAndFailureCallbacks(Utils.scala:1394)
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.org$apache$spark$sql$execution$datasources$FileFormatWriter$$executeTask(FileFormatWriter.scala:248)
+	... 10 more
+
+Driver stacktrace:
+	at org.apache.spark.scheduler.DAGScheduler.org$apache$spark$scheduler$DAGScheduler$$failJobAndIndependentStages(DAGScheduler.scala:1889)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1877)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1876)
+	at scala.collection.mutable.ResizableArray$class.foreach(ResizableArray.scala:59)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:48)
+	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:1876)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:926)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:926)
+	at scala.Option.foreach(Option.scala:257)
+	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:926)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:2110)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2059)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2048)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:49)
+	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:737)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2061)
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.write(FileFormatWriter.scala:167)
+	at org.apache.spark.sql.execution.datasources.InsertIntoHadoopFsRelationCommand.run(InsertIntoHadoopFsRelationCommand.scala:159)
+	at org.apache.spark.sql.execution.command.DataWritingCommandExec.sideEffectResult$lzycompute(commands.scala:104)
+	at org.apache.spark.sql.execution.command.DataWritingCommandExec.sideEffectResult(commands.scala:102)
+	at org.apache.spark.sql.execution.command.DataWritingCommandExec.doExecute(commands.scala:122)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$execute$1.apply(SparkPlan.scala:131)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$execute$1.apply(SparkPlan.scala:127)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$executeQuery$1.apply(SparkPlan.scala:155)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.sql.execution.SparkPlan.executeQuery(SparkPlan.scala:152)
+	at org.apache.spark.sql.execution.SparkPlan.execute(SparkPlan.scala:127)
+	at org.apache.spark.sql.execution.QueryExecution.toRdd$lzycompute(QueryExecution.scala:80)
+	at org.apache.spark.sql.execution.QueryExecution.toRdd(QueryExecution.scala:80)
+	at org.apache.spark.sql.DataFrameWriter$$anonfun$runCommand$1.apply(DataFrameWriter.scala:676)
+	at org.apache.spark.sql.DataFrameWriter$$anonfun$runCommand$1.apply(DataFrameWriter.scala:676)
+	at org.apache.spark.sql.execution.SQLExecution$$anonfun$withNewExecutionId$1.apply(SQLExecution.scala:78)
+	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:125)
+	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:73)
+	at org.apache.spark.sql.DataFrameWriter.runCommand(DataFrameWriter.scala:676)
+	at org.apache.spark.sql.DataFrameWriter.saveToV1Source(DataFrameWriter.scala:285)
+	at org.apache.spark.sql.DataFrameWriter.save(DataFrameWriter.scala:271)
+	at org.apache.spark.sql.DataFrameWriter.save(DataFrameWriter.scala:229)
+	at org.apache.spark.sql.DataFrameWriter.parquet(DataFrameWriter.scala:566)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:357)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.GatewayConnection.run(GatewayConnection.java:238)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.apache.spark.SparkException: Task failed while writing rows.
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.org$apache$spark$sql$execution$datasources$FileFormatWriter$$executeTask(FileFormatWriter.scala:257)
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$$anonfun$write$1.apply(FileFormatWriter.scala:170)
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$$anonfun$write$1.apply(FileFormatWriter.scala:169)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:123)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:408)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:414)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	... 1 more
+Caused by: org.apache.http.ConnectionClosedException: Premature end of Content-Length delimited message body (expected: 17211032; received: 7135798
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:178)
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:198)
+	at org.apache.http.impl.io.ContentLengthInputStream.close(ContentLengthInputStream.java:101)
+	at org.apache.http.conn.BasicManagedEntity.streamClosed(BasicManagedEntity.java:166)
+	at org.apache.http.conn.EofSensorInputStream.checkClose(EofSensorInputStream.java:228)
+	at org.apache.http.conn.EofSensorInputStream.close(EofSensorInputStream.java:172)
+	at java.base/java.io.FilterInputStream.close(FilterInputStream.java:180)
+	at java.base/java.io.FilterInputStream.close(FilterInputStream.java:180)
+	at java.base/java.io.FilterInputStream.close(FilterInputStream.java:180)
+	at java.base/java.io.FilterInputStream.close(FilterInputStream.java:180)
+	at com.amazonaws.services.s3.model.S3ObjectInputStream.abort(S3ObjectInputStream.java:90)
+	at org.apache.hadoop.fs.s3a.S3AInputStream.close(S3AInputStream.java:199)
+	at java.base/java.io.FilterInputStream.close(FilterInputStream.java:180)
+	at org.apache.hadoop.util.LineReader.close(LineReader.java:150)
+	at org.apache.hadoop.mapreduce.lib.input.LineRecordReader.close(LineRecordReader.java:231)
+	at org.apache.spark.sql.execution.datasources.RecordReaderIterator.close(RecordReaderIterator.scala:62)
+	at org.apache.spark.sql.execution.datasources.RecordReaderIterator.hasNext(RecordReaderIterator.scala:44)
+	at org.apache.spark.sql.execution.datasources.HadoopFileLinesReader.hasNext(HadoopFileLinesReader.scala:69)
+	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:409)
+	at scala.collection.Iterator$$anon$13.hasNext(Iterator.scala:462)
+	at scala.collection.Iterator$$anon$12.hasNext(Iterator.scala:440)
+	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:409)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:101)
+	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage1.processNext(Unknown Source)
+	at org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+	at org.apache.spark.sql.execution.WholeStageCodegenExec$$anonfun$13$$anon$1.hasNext(WholeStageCodegenExec.scala:636)
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$$anonfun$org$apache$spark$sql$execution$datasources$FileFormatWriter$$executeTask$3.apply(FileFormatWriter.scala:244)
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$$anonfun$org$apache$spark$sql$execution$datasources$FileFormatWriter$$executeTask$3.apply(FileFormatWriter.scala:242)
+	at org.apache.spark.util.Utils$.tryWithSafeFinallyAndFailureCallbacks(Utils.scala:1394)
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.org$apache$spark$sql$execution$datasources$FileFormatWriter$$executeTask(FileFormatWriter.scala:248)
+	... 10 more
+20/02/05 06:33:22 WARN TaskSetManager: Lost task 2.3 in stage 0.0 (TID 11, 10.0.0.11, executor 1): TaskKilled (Stage cancelled)
+Traceback (most recent call last):
+  File "/home/ubuntu/perf-ops/src/spark_etl.py", line 183, in <module>
+    main()
+  File "/home/ubuntu/perf-ops/src/spark_etl.py", line 123, in main
+    df_customer.write.parquet(SMALL_SAMPLE_PROCESSED_DATASET_CUSTOMER_ROOT_URL)
+  File "/usr/local/spark/python/lib/pyspark.zip/pyspark/sql/readwriter.py", line 843, in parquet
+  File "/usr/local/spark/python/lib/py4j-0.10.7-src.zip/py4j/java_gateway.py", line 1257, in __call__
+  File "/usr/local/spark/python/lib/pyspark.zip/pyspark/sql/utils.py", line 63, in deco
+  File "/usr/local/spark/python/lib/py4j-0.10.7-src.zip/py4j/protocol.py", line 328, in get_return_value
+py4j.protocol.Py4JJavaError: An error occurred while calling o68.parquet.
+: org.apache.spark.SparkException: Job aborted.
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.write(FileFormatWriter.scala:198)
+	at org.apache.spark.sql.execution.datasources.InsertIntoHadoopFsRelationCommand.run(InsertIntoHadoopFsRelationCommand.scala:159)
+	at org.apache.spark.sql.execution.command.DataWritingCommandExec.sideEffectResult$lzycompute(commands.scala:104)
+	at org.apache.spark.sql.execution.command.DataWritingCommandExec.sideEffectResult(commands.scala:102)
+	at org.apache.spark.sql.execution.command.DataWritingCommandExec.doExecute(commands.scala:122)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$execute$1.apply(SparkPlan.scala:131)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$execute$1.apply(SparkPlan.scala:127)
+	at org.apache.spark.sql.execution.SparkPlan$$anonfun$executeQuery$1.apply(SparkPlan.scala:155)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.sql.execution.SparkPlan.executeQuery(SparkPlan.scala:152)
+	at org.apache.spark.sql.execution.SparkPlan.execute(SparkPlan.scala:127)
+	at org.apache.spark.sql.execution.QueryExecution.toRdd$lzycompute(QueryExecution.scala:80)
+	at org.apache.spark.sql.execution.QueryExecution.toRdd(QueryExecution.scala:80)
+	at org.apache.spark.sql.DataFrameWriter$$anonfun$runCommand$1.apply(DataFrameWriter.scala:676)
+	at org.apache.spark.sql.DataFrameWriter$$anonfun$runCommand$1.apply(DataFrameWriter.scala:676)
+	at org.apache.spark.sql.execution.SQLExecution$$anonfun$withNewExecutionId$1.apply(SQLExecution.scala:78)
+	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:125)
+	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:73)
+	at org.apache.spark.sql.DataFrameWriter.runCommand(DataFrameWriter.scala:676)
+	at org.apache.spark.sql.DataFrameWriter.saveToV1Source(DataFrameWriter.scala:285)
+	at org.apache.spark.sql.DataFrameWriter.save(DataFrameWriter.scala:271)
+	at org.apache.spark.sql.DataFrameWriter.save(DataFrameWriter.scala:229)
+	at org.apache.spark.sql.DataFrameWriter.parquet(DataFrameWriter.scala:566)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:357)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.GatewayConnection.run(GatewayConnection.java:238)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.apache.spark.SparkException: Job aborted due to stage failure: Task 1 in stage 0.0 failed 4 times, most recent failure: Lost task 1.3 in stage 0.0 (TID 10, 10.0.0.5, executor 0): org.apache.spark.SparkException: Task failed while writing rows.
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.org$apache$spark$sql$execution$datasources$FileFormatWriter$$executeTask(FileFormatWriter.scala:257)
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$$anonfun$write$1.apply(FileFormatWriter.scala:170)
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$$anonfun$write$1.apply(FileFormatWriter.scala:169)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:123)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:408)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:414)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.apache.http.ConnectionClosedException: Premature end of Content-Length delimited message body (expected: 17211032; received: 7135798
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:178)
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:198)
+	at org.apache.http.impl.io.ContentLengthInputStream.close(ContentLengthInputStream.java:101)
+	at org.apache.http.conn.BasicManagedEntity.streamClosed(BasicManagedEntity.java:166)
+	at org.apache.http.conn.EofSensorInputStream.checkClose(EofSensorInputStream.java:228)
+	at org.apache.http.conn.EofSensorInputStream.close(EofSensorInputStream.java:172)
+	at java.base/java.io.FilterInputStream.close(FilterInputStream.java:180)
+	at java.base/java.io.FilterInputStream.close(FilterInputStream.java:180)
+	at java.base/java.io.FilterInputStream.close(FilterInputStream.java:180)
+	at java.base/java.io.FilterInputStream.close(FilterInputStream.java:180)
+	at com.amazonaws.services.s3.model.S3ObjectInputStream.abort(S3ObjectInputStream.java:90)
+	at org.apache.hadoop.fs.s3a.S3AInputStream.close(S3AInputStream.java:199)
+	at java.base/java.io.FilterInputStream.close(FilterInputStream.java:180)
+	at org.apache.hadoop.util.LineReader.close(LineReader.java:150)
+	at org.apache.hadoop.mapreduce.lib.input.LineRecordReader.close(LineRecordReader.java:231)
+	at org.apache.spark.sql.execution.datasources.RecordReaderIterator.close(RecordReaderIterator.scala:62)
+	at org.apache.spark.sql.execution.datasources.RecordReaderIterator.hasNext(RecordReaderIterator.scala:44)
+	at org.apache.spark.sql.execution.datasources.HadoopFileLinesReader.hasNext(HadoopFileLinesReader.scala:69)
+	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:409)
+	at scala.collection.Iterator$$anon$13.hasNext(Iterator.scala:462)
+	at scala.collection.Iterator$$anon$12.hasNext(Iterator.scala:440)
+	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:409)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:101)
+	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage1.processNext(Unknown Source)
+	at org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+	at org.apache.spark.sql.execution.WholeStageCodegenExec$$anonfun$13$$anon$1.hasNext(WholeStageCodegenExec.scala:636)
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$$anonfun$org$apache$spark$sql$execution$datasources$FileFormatWriter$$executeTask$3.apply(FileFormatWriter.scala:244)
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$$anonfun$org$apache$spark$sql$execution$datasources$FileFormatWriter$$executeTask$3.apply(FileFormatWriter.scala:242)
+	at org.apache.spark.util.Utils$.tryWithSafeFinallyAndFailureCallbacks(Utils.scala:1394)
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.org$apache$spark$sql$execution$datasources$FileFormatWriter$$executeTask(FileFormatWriter.scala:248)
+	... 10 more
+
+Driver stacktrace:
+	at org.apache.spark.scheduler.DAGScheduler.org$apache$spark$scheduler$DAGScheduler$$failJobAndIndependentStages(DAGScheduler.scala:1889)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1877)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1876)
+	at scala.collection.mutable.ResizableArray$class.foreach(ResizableArray.scala:59)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:48)
+	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:1876)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:926)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:926)
+	at scala.Option.foreach(Option.scala:257)
+	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:926)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:2110)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2059)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2048)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:49)
+	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:737)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2061)
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.write(FileFormatWriter.scala:167)
+	... 33 more
+Caused by: org.apache.spark.SparkException: Task failed while writing rows.
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.org$apache$spark$sql$execution$datasources$FileFormatWriter$$executeTask(FileFormatWriter.scala:257)
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$$anonfun$write$1.apply(FileFormatWriter.scala:170)
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$$anonfun$write$1.apply(FileFormatWriter.scala:169)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:123)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:408)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:414)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	... 1 more
+Caused by: org.apache.http.ConnectionClosedException: Premature end of Content-Length delimited message body (expected: 17211032; received: 7135798
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:178)
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:198)
+	at org.apache.http.impl.io.ContentLengthInputStream.close(ContentLengthInputStream.java:101)
+	at org.apache.http.conn.BasicManagedEntity.streamClosed(BasicManagedEntity.java:166)
+	at org.apache.http.conn.EofSensorInputStream.checkClose(EofSensorInputStream.java:228)
+	at org.apache.http.conn.EofSensorInputStream.close(EofSensorInputStream.java:172)
+	at java.base/java.io.FilterInputStream.close(FilterInputStream.java:180)
+	at java.base/java.io.FilterInputStream.close(FilterInputStream.java:180)
+	at java.base/java.io.FilterInputStream.close(FilterInputStream.java:180)
+	at java.base/java.io.FilterInputStream.close(FilterInputStream.java:180)
+	at com.amazonaws.services.s3.model.S3ObjectInputStream.abort(S3ObjectInputStream.java:90)
+	at org.apache.hadoop.fs.s3a.S3AInputStream.close(S3AInputStream.java:199)
+	at java.base/java.io.FilterInputStream.close(FilterInputStream.java:180)
+	at org.apache.hadoop.util.LineReader.close(LineReader.java:150)
+	at org.apache.hadoop.mapreduce.lib.input.LineRecordReader.close(LineRecordReader.java:231)
+	at org.apache.spark.sql.execution.datasources.RecordReaderIterator.close(RecordReaderIterator.scala:62)
+	at org.apache.spark.sql.execution.datasources.RecordReaderIterator.hasNext(RecordReaderIterator.scala:44)
+	at org.apache.spark.sql.execution.datasources.HadoopFileLinesReader.hasNext(HadoopFileLinesReader.scala:69)
+	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:409)
+	at scala.collection.Iterator$$anon$13.hasNext(Iterator.scala:462)
+	at scala.collection.Iterator$$anon$12.hasNext(Iterator.scala:440)
+	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:409)
+	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:101)
+	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage1.processNext(Unknown Source)
+	at org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+	at org.apache.spark.sql.execution.WholeStageCodegenExec$$anonfun$13$$anon$1.hasNext(WholeStageCodegenExec.scala:636)
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$$anonfun$org$apache$spark$sql$execution$datasources$FileFormatWriter$$executeTask$3.apply(FileFormatWriter.scala:244)
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$$anonfun$org$apache$spark$sql$execution$datasources$FileFormatWriter$$executeTask$3.apply(FileFormatWriter.scala:242)
+	at org.apache.spark.util.Utils$.tryWithSafeFinallyAndFailureCallbacks(Utils.scala:1394)
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.org$apache$spark$sql$execution$datasources$FileFormatWriter$$executeTask(FileFormatWriter.scala:248)
+	... 10 more
+
+20/02/05 06:33:22 INFO SparkContext: Invoking stop() from shutdown hook
+20/02/05 06:33:22 INFO SparkUI: Stopped Spark web UI at http://ip-10-0-0-14.us-west-2.compute.internal:4040
+20/02/05 06:33:22 INFO StandaloneSchedulerBackend: Shutting down all executors
+20/02/05 06:33:22 INFO CoarseGrainedSchedulerBackend$DriverEndpoint: Asking each executor to shut down
+20/02/05 06:33:22 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+20/02/05 06:33:22 INFO MemoryStore: MemoryStore cleared
+20/02/05 06:33:22 INFO BlockManager: BlockManager stopped
+20/02/05 06:33:22 INFO BlockManagerMaster: BlockManagerMaster stopped
+20/02/05 06:33:22 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+20/02/05 06:33:22 INFO SparkContext: Successfully stopped SparkContext
+20/02/05 06:33:22 INFO ShutdownHookManager: Shutdown hook called
+20/02/05 06:33:22 INFO ShutdownHookManager: Deleting directory /tmp/spark-1ed7bd87-a161-47f2-b788-ab61fe50f67b/pyspark-992e9a8f-629a-4399-a3fc-bb933cd20308
+20/02/05 06:33:22 INFO ShutdownHookManager: Deleting directory /tmp/spark-82d78511-0c28-4da5-bdd8-b6d8c109fab1
+20/02/05 06:33:22 INFO ShutdownHookManager: Deleting directory /tmp/spark-1ed7bd87-a161-47f2-b788-ab61fe50f67b
+ubuntu@ip-10-0-0-14:~/perf-ops/src$
