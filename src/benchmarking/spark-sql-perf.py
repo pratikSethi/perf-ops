@@ -59,3 +59,7 @@ def main():
     count = customerDF.count()
 
     print(f"************total count is {count}****************")
+
+
+if __name__ == "__main__":
+    main()
