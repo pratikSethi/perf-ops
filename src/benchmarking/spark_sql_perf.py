@@ -59,7 +59,9 @@ def main():
     SQLQuery = 'SELECT count(*) AS count FROM customer'
     customerCount = sqlContext.sql(SQLQuery)
 
-    print(f"########## customer count is {customerCount} #############")
+    print(
+        f'########## customer count is {customerCount.count()} #############')
+    customerCount.show()
 
 
 def getCustomerDF(spark, customerDataPathS3):
