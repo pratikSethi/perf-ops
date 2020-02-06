@@ -28,7 +28,7 @@ FS_S3_AWS_SECRET_ACCESS_KEY_KEY = 'fs.s3n.awsSecretAccessKey'
 
 APP_NAME = 'spark-sql-stats'
 
-SMALL_PARQUET_DATASET_CUSTOMER_ROOT_URL = 's3a://sample-processed/tpch/block/1/customer/'
+SMALL_PARQUET_DATASET_CUSTOMER_ROOT_URL = 's3a://sample-processed/tpch/block/1/customer/*.parquet'
 SMALL_SAMPLE_PROCESSED_DATASET_CUSTOMER_ROOT_URL = 's3a://sample-processed/tpch/block/1/customer/'
 
 
@@ -54,11 +54,19 @@ def main():
 
     sqlContext = SQLContext(sc)
 
-    customerDF = spark.read.parquet(
-        's3a://sample-processed/tpch/block/1/customer/*')
-    count = customerDF.count()
+    customerDF = getCustomerDF(spark, SMALL_PARQUET_DATASET_CUSTOMER_ROOT_URL)
+    customerDF.registerTempTable('customer')
+    SQLQuery = 'SELECT count(*) AS count FROM customer'
+    customerCount = sqlContext.sql(SQLQuery)
 
+    print(f"########## customer count is {customerCount} #############")
+
+
+def getCustomerDF(spark, customerDataPathS3):
+    customerDF = spark.read.parquet(customerDataPathS3)
+    count = customerDF.count()
     print(f"************total count is {count}****************")
+    return customerDF
 
 
 if __name__ == "__main__":
