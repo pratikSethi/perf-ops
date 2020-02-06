@@ -1,0 +1,22 @@
+=======================================
+Error 1: (Spark) Task failed while writing rows
+
+20/02/05 06:33:14 WARN TaskSetManager: Lost task 1.0 in stage 0.0 (TID 1, 10.0.0.5, executor 0): org.apache.spark.SparkException: Task failed while writing rows.
+	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.org$apache$spark$sql$execution$datasources$FileFormatWriter$$executeTask(FileFormatWriter.scala:257)
+	...
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.apache.http.ConnectionClosedException: Premature end of Content-Length delimited message body (expected: 17211032; received: 7145390
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:178)
+	
+
+Fix 1: Created a new Cluster with openjdk 8 (previous one was with openjdk 11) and pointed the tasks to new master
+=======================================
+
+Error 2: (Glue) Error Access Denied (Service: Amazon S3; Status Code: 403; Error Code: AccessDenied;
+	Tables created did not infer schemas from this file
+
+Fix 2: https://stackoverflow.com/questions/51899441/aws-glue-access-denied-for-crawler-with-administrator-policy-attached
+=======================================
+
+Error 3: 
