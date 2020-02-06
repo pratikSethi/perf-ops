@@ -56,11 +56,11 @@ def main():
 
     customerDF = getCustomerDF(spark, SMALL_PARQUET_DATASET_CUSTOMER_ROOT_URL)
     customerDF.registerTempTable('customer')
-    SQLQuery = 'SELECT count(*) AS count FROM customer'
-    customerCount = sqlContext.sql(SQLQuery)
+    SQLQuery = 'SELECT count(*) AS cnt FROM customer'
+    customerCount = sqlContext.sql(SQLQuery).first()['cnt']
 
     print(
-        f'########## customer count is {customerCount.count()} #############')
+        f'########## customer count is {customerCount} #############')
     customerCount.show()
 
 
