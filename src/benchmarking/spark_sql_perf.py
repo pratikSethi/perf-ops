@@ -70,7 +70,8 @@ def main():
     # print(f'########## customer count is {customerCount} #############')
     # customerCount.show()
 
-    SQLQuery = 'from orders join lineitem on o_orderkey = l_orderkey \
+    SQLQuery = 'select c_custkey, c_name, sum(l_quantity) tot_qty \
+            from orders join lineitem on o_orderkey = l_orderkey \
             join customer on c_custkey = o_custkey \
             group by c_custkey, c_name \
             order by tot_qty \
