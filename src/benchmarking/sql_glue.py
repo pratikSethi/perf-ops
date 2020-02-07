@@ -2,6 +2,7 @@ from os.path import expanduser, join, abspath
 
 from pyspark.sql import SparkSession
 from pyspark.sql import Row
+import os
 
 # .config("spark.sql.warehouse.dir", 's3a://sample-processed/tpch/block/1/') \
 
@@ -18,10 +19,11 @@ def main():
         .builder \
         .appName("Python Spark SQL Glue integration example") \
         .config("hive.metastore.client.factory.class", "com.amazonaws.glue.catalog.metastore.AWSGlueDataCatalogHiveClientFactory") \
+        .config("spark.sql.warehouse.dir", 's3a://sample-processed/tpch/block/1/') \
         .enableHiveSupport() \
         .getOrCreate()
 
-    hadoop_conf = sc._jsc.hadoopConfiguration()
+    hadoop_conf = spark._jsc.hadoopConfiguration()
     hadoop_conf.set(FS_S3_IMPL, FS_S3_IMPL_CLASSNAME)
     hadoop_conf.set(FS_S3_AWS_ACCESS_KEY_ID_KEY,
                     os.getenv('AWS_ACCESS_KEY_ID'))

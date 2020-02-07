@@ -6,6 +6,7 @@ from pyspark.sql import SQLContext
 from pyspark import SparkContext, SparkConf
 
 from pyspark.sql.types import *
+import time
 
 # TODO: All the configs can be placed in config.yaml file
 # AWS Config params
@@ -30,6 +31,8 @@ APP_NAME = 'spark-sql-stats'
 
 SMALL_PARQUET_DATASET_CUSTOMER_ROOT_URL = 's3a://sample-processed/tpch/block/1/customer/*.parquet'
 SMALL_SAMPLE_PROCESSED_DATASET_CUSTOMER_ROOT_URL = 's3a://sample-processed/tpch/block/1/customer/'
+SMALL_SAMPLE_PROCESSED_DATASET_ORDERS_ROOT_URL = 's3a://sample-processed/tpch/block/1/orders/'
+SMALL_SAMPLE_PROCESSED_DATASET_LINEITEM_ROOT_URL = 's3a://sample-processed/tpch/block/1/lineitem/'
 
 
 def main():
@@ -55,13 +58,30 @@ def main():
     sqlContext = SQLContext(sc)
 
     customerDF = getCustomerDF(spark, SMALL_PARQUET_DATASET_CUSTOMER_ROOT_URL)
+    ordersDF = getOrdersDF(
+        spark, SMALL_SAMPLE_PROCESSED_DATASET_ORDERS_ROOT_URL)
+    lineitemDF = getLineitemDF(
+        spark, SMALL_SAMPLE_PROCESSED_DATASET_LINEITEM_ROOT_URL)
     customerDF.registerTempTable('customer')
-    SQLQuery = 'SELECT count(*) AS cnt FROM customer'
-    customerCount = sqlContext.sql(SQLQuery).first()['cnt']
+    ordersDF.registerTempTable('orders')
+    lineitemDF.registerTempTable('lineitem')
+    #SQLQuery = 'SELECT count(*) AS cnt FROM customer'
+    #customerCount = sqlContext.sql(SQLQuery).first()['cnt']
+    # print(f'########## customer count is {customerCount} #############')
+    # customerCount.show()
 
-    print(
-        f'########## customer count is {customerCount} #############')
-    customerCount.show()
+    SQLQuery = 'from orders join lineitem on o_orderkey = l_orderkey \
+            join customer on c_custkey = o_custkey \
+            group by c_custkey, c_name \
+            order by tot_qty \
+            desc limit 10'
+    # customerCount = sqlContext.sql(SQLQuery).first()['cnt']
+    startTime = time.time()
+    top10CustomersDF = sqlContext.sql(SQLQuery)
+    endTime = time.time()
+    queryExecutionTime = endTime - startTime
+    top10CustomersDF.show()
+    print(f'########## The query executed in {queryExecutionTime} ##########')
 
 
 def getCustomerDF(spark, customerDataPathS3):
