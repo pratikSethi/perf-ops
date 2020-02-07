@@ -87,8 +87,22 @@ def main():
 def getCustomerDF(spark, customerDataPathS3):
     customerDF = spark.read.parquet(customerDataPathS3)
     count = customerDF.count()
-    print(f"************total count is {count}****************")
+    print(f"************total count customer is {count}****************")
     return customerDF
+
+
+def getOrdersDF(spark, ordersDataPathS3):
+    ordersDF = spark.read.parquet(customerDataPathS3)
+    count = ordersDF.count()
+    print(f"************total count orders is {count}****************")
+    return ordersDF
+
+
+def getLineitemDF(spark, lineitemDataPathS3):
+    lineitemDF = spark.read.parquet(customerDataPathS3)
+    count = lineitemDF.count()
+    print(f"************total count lineitem is {count}****************")
+    return lineitemDF
 
 
 if __name__ == "__main__":
