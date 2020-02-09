@@ -65,24 +65,28 @@ def main():
     customerDF.registerTempTable('customer')
     ordersDF.registerTempTable('orders')
     lineitemDF.registerTempTable('lineitem')
-    #SQLQuery = 'SELECT count(*) AS cnt FROM customer'
-    #customerCount = sqlContext.sql(SQLQuery).first()['cnt']
-    # print(f'########## customer count is {customerCount} #############')
-    # customerCount.show()
 
-    SQLQuery = 'select c_custkey, c_name, sum(l_quantity) tot_qty \
-            from orders join lineitem on o_orderkey = l_orderkey \
-            join customer on c_custkey = o_custkey \
-            group by c_custkey, c_name \
-            order by tot_qty \
-            desc limit 10'
-    # customerCount = sqlContext.sql(SQLQuery).first()['cnt']
+    SQLQuery = 'select o_custkey, c_name, tot_qty \
+            from (select o.o_custkey, sum(l.l_quantity) as tot_qty \
+            from orders o \
+            inner join lineitem l \
+            on o.o_orderkey = l.l_orderkey \
+            group by o.o_custkey \
+            order by tot_qty desc \
+            limit 10) \
+            t inner join customer c \
+            on t.o_custkey = c.c_custkey order by tot_qty desc'
     startTime = time.time()
     top10CustomersDF = sqlContext.sql(SQLQuery)
     endTime = time.time()
     queryExecutionTime = endTime - startTime
+    lazyStartTime = time.time()
     top10CustomersDF.show()
-    print(f'########## The query executed in {queryExecutionTime} ##########')
+    lazyEndTime = time.time()
+    lazyExecutionTime = lazyEndTime - lazyStartTime
+    print(
+        f'########## The query context time is :: {queryExecutionTime} ##########')
+    print(f'########## The query executed in {lazyExecutionTime} ##########')
 
 
 def getCustomerDF(spark, customerDataPathS3):
