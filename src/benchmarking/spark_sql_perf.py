@@ -29,10 +29,26 @@ FS_S3_AWS_SECRET_ACCESS_KEY_KEY = 'fs.s3n.awsSecretAccessKey'
 
 APP_NAME = 'spark-sql-stats'
 
-SMALL_PARQUET_DATASET_CUSTOMER_ROOT_URL = 's3a://sample-processed/tpch/block/1/customer/*.parquet'
-SMALL_SAMPLE_PROCESSED_DATASET_CUSTOMER_ROOT_URL = 's3a://sample-processed/tpch/block/1/customer/'
-SMALL_SAMPLE_PROCESSED_DATASET_ORDERS_ROOT_URL = 's3a://sample-processed/tpch/block/1/orders/'
-SMALL_SAMPLE_PROCESSED_DATASET_LINEITEM_ROOT_URL = 's3a://sample-processed/tpch/block/1/lineitem/'
+# This should be in the config file as well
+CUSTOMER_DATASET_PARQUET_URL = 's3a://optmark-processed/tpch/block/10/customer/'
+LINEITEM_DATASET_PARQUET_URL = 's3a://optmark-processed/tpch/block/10/lineitem/'
+NATION_DATASET_PARQUET_URL = 's3a://optmark-processed/tpch/block/10/nation/'
+ORDERS_DATASET_PARQUET_URL = 's3a://optmark-processed/tpch/block/10/orders/'
+PART_DATASET_PARQUET_URL = 's3a://optmark-processed/tpch/block/10/part/'
+PARTSUPP_DATASET_PARQUET_URL = 's3a://optmark-processed/tpch/block/10/partsupp/'
+REGION_DATASET_PARQUET_URL = 's3a://optmark-processed/tpch/block/10/region/'
+SUPPLIER_DATASET_PARQUET_URL = 's3a://optmark-processed/tpch/block/10/supplier/'
+
+# This should be read from a separate file as well (e.g: <benchmarking_queries.sql>)
+SQLQuery = 'SELECT \
+            orders.o_orderkey, SUM(l_tax) as tax \
+            FROM orders \
+            LEFT JOIN lineitem \
+            ON orders.o_orderkey = lineitem.l_orderkey \
+            WHERE l_discount = 0 \
+            GROUP BY orders.o_orderkey \
+            ORDER BY o_orderkey DESC \
+            LIMIT 10'
 
 
 def main():
@@ -57,57 +73,43 @@ def main():
 
     sqlContext = SQLContext(sc)
 
-    customerDF = getCustomerDF(spark, SMALL_PARQUET_DATASET_CUSTOMER_ROOT_URL)
-    ordersDF = getOrdersDF(
-        spark, SMALL_SAMPLE_PROCESSED_DATASET_ORDERS_ROOT_URL)
-    lineitemDF = getLineitemDF(
-        spark, SMALL_SAMPLE_PROCESSED_DATASET_LINEITEM_ROOT_URL)
-    customerDF.registerTempTable('customer')
-    ordersDF.registerTempTable('orders')
-    lineitemDF.registerTempTable('lineitem')
+    # Refactor the below repititve code to write something like for each databaseTable in databaseTables
+    # tables = [CUSTOMER_DATASET_PARQUET_URL, LINEITEM_DATASET_PARQUET_URL...]
+    # dataframes = [customerDF, lineitemDF, ]
+    customerDF = getDF(spark, CUSTOMER_DATASET_PARQUET_URL)
+    lineitemDF = getDF(spark, LINEITEM_DATASET_PARQUET_URL)
+    nationDF = getDF(spark, NATION_DATASET_PARQUET_URL)
+    ordersDF = getDF(spark, ORDERS_DATASET_PARQUET_URL)
+    partDF = getDF(spark, PART_DATASET_PARQUET_URL)
+    partsuppDF = getDF(spark, PARTSUPP_DATASET_PARQUET_URL)
+    regionDF = getDF(spark, REGION_DATASET_PARQUET_URL)
+    supplierDF = getDF(spark, SUPPLIER_DATASET_PARQUET_URL)
 
-    SQLQuery = 'select o_custkey, c_name, tot_qty \
-            from (select o.o_custkey, sum(l.l_quantity) as tot_qty \
-            from orders o \
-            inner join lineitem l \
-            on o.o_orderkey = l.l_orderkey \
-            group by o.o_custkey \
-            order by tot_qty desc \
-            limit 10) \
-            t inner join customer c \
-            on t.o_custkey = c.c_custkey order by tot_qty desc'
-    startTime = time.time()
+    # register all the tables here in order to make them accessible
+    customerDF.registerTempTable('customer')
+    lineitemDF.registerTempTable('lineitem')
+    nationDF.registerTempTable('nation')
+    ordersDF.registerTempTable('orders')
+    partDF.registerTempTable('part')
+    partsuppDF.registerTempTable('partsupp')
+    regionDF.registerTempTable('region')
+    supplierDF.registerTempTable('supplier')
+
     top10CustomersDF = sqlContext.sql(SQLQuery)
-    endTime = time.time()
-    queryExecutionTime = endTime - startTime
     lazyStartTime = time.time()
+    # This is where the SQLQuery will lazily evaluated
     top10CustomersDF.show()
     lazyEndTime = time.time()
     lazyExecutionTime = lazyEndTime - lazyStartTime
-    print(
-        f'########## The query context time is :: {queryExecutionTime} ##########')
+
     print(f'########## The query executed in {lazyExecutionTime} ##########')
 
 
-def getCustomerDF(spark, customerDataPathS3):
-    customerDF = spark.read.parquet(customerDataPathS3)
-    count = customerDF.count()
-    print(f"************total count customer is {count}****************")
-    return customerDF
-
-
-def getOrdersDF(spark, ordersDataPathS3):
-    ordersDF = spark.read.parquet(ordersDataPathS3)
-    count = ordersDF.count()
-    print(f"************total count orders is {count}****************")
-    return ordersDF
-
-
-def getLineitemDF(spark, lineitemDataPathS3):
-    lineitemDF = spark.read.parquet(lineitemDataPathS3)
-    count = lineitemDF.count()
-    print(f"************total count lineitem is {count}****************")
-    return lineitemDF
+def getDF(spark, parquetDataTablePathInS3):
+    df = spark.read.parquet(customerDataPathS3)
+    count = df.count()
+    print(f'************Total row count for the df is {count}****************')
+    return df
 
 
 if __name__ == "__main__":

@@ -17,9 +17,9 @@ AWS_SECRET_ACCESS_KEY = 'aws_secret_access_key'
 
 # Spark Config params
 SPARK_EXECUTOR_MEMORY_KEY = 'spark.executor.memory'
-SPARK_EXECUTOR_MEMORY_VALUE = '5g'
+SPARK_EXECUTOR_MEMORY_VALUE = '6g'
 SPARK_DRIVER_MEMORY_KEY = 'spark.driver.memory'
-SPARK_DRIVER_MEMORY_VALUE = '5g'
+SPARK_DRIVER_MEMORY_VALUE = '6g'
 
 # Hadoop FS Config params
 FS_S3_IMPL = 'fs.s3n.impl'
@@ -29,6 +29,7 @@ FS_S3_AWS_SECRET_ACCESS_KEY_KEY = 'fs.s3n.awsSecretAccessKey'
 
 # TODO: Maybe create a constant map SMALL_SAMPLE_UNPROCESSED_DATASET = {'Customer' : <s3-url>}
 # So that we can automate the loading or maybe use some wildcards trick to automate the stuff
+# TODO: generic processes tpch url
 
 # ================ MEDIUM UNPROCESSED TABLES ================ #
 MEDIUM_SAMPLE_UNPROCESSED_DATASET_CUSTOMER_ROOT_URL = 's3a://optmark-unprocessed/tpch/block/100/customer.tbl'
@@ -53,21 +54,7 @@ MEDIUM_SAMPLE_PROCESSED_DATASET_SUPPLIER_ROOT_URL = 's3a://optmark-processed/tpc
 # ================ MEDIUM PROCESSED TABLES ================ #
 
 
-# TODO: generic processes tpch url
-# s3a://sample-processed/tpch/block/<datasetSize>/tableName
-
-# Actual Datasets
-# S3 Locations 10 GB TPCH Dataset
-SMALL_UNPROCESSED_DATASET_ROOT_URL = 's3a://optmark-unprocessed/tpch/block/1/*'
-# S3 Locations 10 GB TPCH Dataset
-MEDIUM_UNPROCESSED_DATASET_ROOT_URL = 's3a://optmark-unprocessed/tpch/block/10/*'
-# S3 Location 100 GB TPCH Dataset
-LARGE_UNPROCESSED_DATASET_ROOT_URL = 's3a://optmark-unprocessed/tpch/block/100/*'
-# S3 Locations 1000 GB TPCH Dataset
-XTRA_LARGE_UNPROCESSED_DATASET_ROOT_URL = 's3a://optmark-unprocessed/tpch/block/1000/*'
-
 PIPE_DELIMITER = '|'
-COMMA_DELIMITER = ','
 
 # App Config
 APP_NAME = 'spark-etl'
