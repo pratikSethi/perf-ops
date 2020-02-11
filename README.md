@@ -6,10 +6,18 @@
 
 A comparative analysis of Distibuted SQL Engines `SparkSQL` and `Presto` , with and without `Alluxio` .
 
-## A collapsible section with markdown
+## Spark ETL
+
+## Architecture
+
+## Results
+
+## Queries
+
+## Installations
 
 <details>
-  <summary>Click to expand!</summary>
+  <summary>Presto</summary>
   
   ## Heading
   1. A numbered
@@ -17,3 +25,37 @@ A comparative analysis of Distibuted SQL Engines `SparkSQL` and `Presto` , with 
      * With some
      * Sub bullets
 </details>
+
+<details>
+  <summary>Spark</summary>
+  
+  ## Heading
+  1. A numbered
+  2. list
+     * With some
+     * Sub bullets
+</details>
+
+<details>
+  <summary>Glue</summary>
+  
+  ## Heading
+  1. A numbered
+  2. list
+     * With some
+     * Sub bullets
+</details>
+
+<details>
+  <summary>Alluxio</summary>
+  
+  ## Heading
+  1. A numbered
+  2. list
+     * With some
+     * Sub bullets
+</details>
+
+## Additional Resources
+
+- Slides
