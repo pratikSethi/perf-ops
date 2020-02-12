@@ -8,19 +8,33 @@ A comparative analysis of Distibuted SQL Engines `SparkSQL` and `Presto` , with 
 
 ## Dataset and Spark ETL
 
-- src/spark-etl.png
+- Dataset: [TPC-H](http://www.tpc.org/tpch/)
+
+    <details>
+    <summary>TPC-H Schema</summary>
+
+  ![TPC-H Schema](tpch-schema-snowflake.png)
+
+    </details>
+
   ![spark-etl](spark-etl.png)
 
-- etl image
-- etl stats
+* ETL Stats
+  ![spark-etl-stats](spark-etl-stats.png)
+
+  **7 node:** 1 x m4.xlarge(master), 6 x m4.large(worker nodes)
+
+  **3 node:** 1 x m4.xlarge(master), 2 x m4.large(worker nodes)
 
 ## Architecture
 
-- architecture image
+- **Presto, Spark, Glue, S3**
+
+  ![architecture.png](architecture.png)
 
 ## Results
 
-- query stats
+![query-stats](query-stats.png)
 
 ## Queries
 
@@ -30,6 +44,18 @@ A comparative analysis of Distibuted SQL Engines `SparkSQL` and `Presto` , with 
 ## Future Roadmap
 
 - add the points from the slides
+
+## Installations
+
+<details>
+  <summary>Presto</summary>
+  
+  ## Heading
+  1. A numbered
+  2. list
+     * With some
+     * Sub bullets
+</details>
 
 <details>
   <summary>Spark</summary>
