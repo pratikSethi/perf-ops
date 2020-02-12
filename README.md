@@ -15,6 +15,8 @@ A comparative analysis of Distibuted SQL Engines `SparkSQL` and `Presto`
 
   ![TPC-H Schema](./assets/tpch-schema-snowflake.png)
 
+  [source](https://docs.snowflake.net/manuals/user-guide/sample-data-tpch.html)
+
     </details>
 
   ![spark-etl](./assets/spark-etl.png)
