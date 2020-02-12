@@ -2,9 +2,9 @@
 
 `AWS` `S3` `Glue` `Presto` `Spark` `SparkSQL` `Alluxio` `Parquet` `TPC-H`
 
-## Performance/Cost Optimizations and Benchmarks for Distributed SQL Engines
+## Performance Optimizations Analysis for Distributed SQL Engines
 
-A comparative analysis of Distibuted SQL Engines `SparkSQL` and `Presto` , with and without `Alluxio`.
+A comparative analysis of Distibuted SQL Engines `SparkSQL` and `Presto`
 
 ## Dataset and Spark ETL
 
@@ -13,83 +13,69 @@ A comparative analysis of Distibuted SQL Engines `SparkSQL` and `Presto` , with 
     <details>
     <summary>TPC-H Schema</summary>
 
-  ![TPC-H Schema](tpch-schema-snowflake.png)
+  ![TPC-H Schema](./assets/tpch-schema-snowflake.png)
 
     </details>
 
-  ![spark-etl](spark-etl.png)
+  ![spark-etl](./assets/spark-etl.png)
 
-* ETL Stats
-  ![spark-etl-stats](spark-etl-stats.png)
+  <details>
+  <summary>ETL Stats</summary>
+
+  ![spark-etl-stats](./assets/spark-etl-stats.png)
 
   **7 node:** 1 x m4.xlarge(master), 6 x m4.large(worker nodes)
 
   **3 node:** 1 x m4.xlarge(master), 2 x m4.large(worker nodes)
 
+  </details>
+
 ## Architecture
 
 - **Presto, Spark, Glue, S3**
 
-  ![architecture.png](architecture.png)
+  ![architecture.png](./assets/architecture.png)
 
 ## Results
 
-![query-stats](query-stats.png)
+- **Query Stats**
 
-## Queries
+  ![query-stats](./assets/query-stats.png)
 
-- q1
-- q2
+- **Queries**
+
+  <details>
+  <summary>Q1</summary>
+
+  ![q1](./assets/q1.png)
+
+  </details>
+
+  <details>
+  <summary>Q2</summary>
+
+  ![q2](./assets/q2.png)
+
+  </details>
+
+  <details>
+  <summary>Q3</summary>
+
+  ![q3](./assets/q3.png)
+
+  </details>
 
 ## Future Roadmap
 
-- add the points from the slides
+- Automate the cluster provisioning
 
-## Installations
+- Automate experiments and stats collection
 
-<details>
-  <summary>Presto</summary>
-  
-  ## Heading
-  1. A numbered
-  2. list
-     * With some
-     * Sub bullets
-</details>
+  - Config driven framework
 
-<details>
-  <summary>Spark</summary>
-  
-  ## Heading
-  1. A numbered
-  2. list
-     * With some
-     * Sub bullets
-</details>
-
-<details>
-  <summary>Glue</summary>
-  
-  ## Heading
-  1. A numbered
-  2. list
-     * With some
-     * Sub bullets
-</details>
-
-<details>
-  <summary>Alluxio</summary>
-  
-  ## Heading
-  1. A numbered
-  2. list
-     * With some
-     * Sub bullets
-</details>
+- Run federated queries
 
 ## Additional Resources
 
-- link to Slides (perf-ops)
-- parquet
-- presto paper link
-- tpch
+- [Slides](http://bit.ly/perf-ops-slides)
+- [Presto paper](https://prestosql.io/Presto_SQL_on_Everything.pdf)
