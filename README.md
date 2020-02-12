@@ -4,27 +4,32 @@
 
 ## Performance/Cost Optimizations and Benchmarks for Distributed SQL Engines
 
-A comparative analysis of Distibuted SQL Engines `SparkSQL` and `Presto` , with and without `Alluxio` .
+A comparative analysis of Distibuted SQL Engines `SparkSQL` and `Presto` , with and without `Alluxio`.
 
-## Spark ETL
+## Dataset and Spark ETL
+
+- src/spark-etl.png
+  ![spark-etl](spark-etl.png)
+
+- etl image
+- etl stats
 
 ## Architecture
 
+- architecture image
+
 ## Results
+
+- query stats
 
 ## Queries
 
-## Installations
+- q1
+- q2
 
-<details>
-  <summary>Presto</summary>
-  
-  ## Heading
-  1. A numbered
-  2. list
-     * With some
-     * Sub bullets
-</details>
+## Future Roadmap
+
+- add the points from the slides
 
 <details>
   <summary>Spark</summary>
@@ -58,4 +63,7 @@ A comparative analysis of Distibuted SQL Engines `SparkSQL` and `Presto` , with 
 
 ## Additional Resources
 
-- Slides
+- link to Slides (perf-ops)
+- parquet
+- presto paper link
+- tpch
